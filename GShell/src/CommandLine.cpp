@@ -4,17 +4,27 @@
  *  Created on: Mar 17, 2018
  *      Author: cmshalom
  */
-
-#include "CommandLine.h"
-using namespace std;
-#include<stdio.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <string>
+#include "CommandLine.h"
+
+#define WIN_LEFT 0
+#define WIN_TOP 21
+#define WIN_HEIGHT 3
+#define WIN_WIDTH 80
+#define EDIT_START_POSITION 1
+#define EDIT_END_POSITION WIN_WIDTH - 2
+#define MAX_COMMAND_LENGTH EDIT_END_POSITION - EDIT_START_POSITION + 1
+
+using namespace std;
 
 bool CommandLine::insertMode;
+int CommandLine::eraseCharacter;
+
 
 CommandLine::CommandLine() {
-	this->line = "";
+	line = "";
 
 }
 
@@ -25,29 +35,22 @@ CommandLine::CommandLine(string line) {
 CommandLine::~CommandLine() {
 }
 
-int CommandLine::edit(WINDOW *win) {
+int CommandLine::edit() {
 	int c;
-	getmaxyx(win,maxY,maxX);
-	minX = 3;
-	minY = 1;
+
+	WINDOW *win = initWindow();
 	eraseCharacter = erasechar();
 	commandLength = line.length();
-	wmove(win, 1, 3);
+	wmove(win, 1, EDIT_START_POSITION);
 	waddstr(win, line.c_str());
-	wclrtoeol(win);
-	keypad(stdscr, TRUE);
-	mousemask(ALL_MOUSE_EVENTS,NULL);
-	//	keypad(win,true);
 	while (true) {
-		getyx(win,currY,currX);
+		getyx(win,currY, currX);
 		c=wgetch(win);
-		if(c < KEY_MIN && isprint(c))
-		{
-			winAddChar(win,c);
-		}
-		else if (c == eraseCharacter) {
+		if (c == eraseCharacter) {
 			leftArrow(win);
-			DeleteCharacter(win);
+			deleteCharacter(win);
+		} else if (c < KEY_MIN && isprint(c)) {
+				winAddChar(win,c);
 		} else {
 			switch(c){
 			case KEY_IC:
@@ -62,7 +65,7 @@ int CommandLine::edit(WINDOW *win) {
 				wrefresh(win);
 				break;
 			case KEY_DC:
-				DeleteCharacter(win);
+				deleteCharacter(win);
 				refresh();
 				break;
 			case KEY_MOUSE:
@@ -76,6 +79,7 @@ int CommandLine::edit(WINDOW *win) {
 				break;
 			default:
 				updateLineFromWindow(win);
+				endwin();
 				return c;
 			}
 		}
@@ -90,7 +94,6 @@ void CommandLine::send(int fd) {
 }
 
 void CommandLine::init(){
-	mousemask(BUTTON1_CLICKED,NULL);
 	insertMode= false;
 	toggleInsertMode();
 }
@@ -101,89 +104,90 @@ void CommandLine::toggleInsertMode(){
 }
 
 void CommandLine::leftArrow(WINDOW *win){
-	if(currX == 3 && currY == 1) return;
-	if(currX == 3 && currY > 1)
-		wmove(win,currY-1,maxX -2);
-	else wmove(win,currY,currX-1);
+	if(currX == EDIT_START_POSITION) return;
+	wmove(win,currY,currX-1);
 }
 
 void CommandLine::rightArrow(WINDOW *win){
-	if((currY-1)*(maxX) + currX == commandLength+5*(currY-1) + 3)   //end of command
-		return;
-	else if((currY-1)*(maxX) + currX < commandLength+5*(currY-1) + 3 && currX == maxX-2) //next line of command
-		wmove(win,currY+1,minX);
-	else
-		wmove(win,currY,currX+1);
-
+	if(currX == commandLength+EDIT_START_POSITION) return;
+	wmove(win,currY,currX+1);
 }
 
 void CommandLine::updateLineFromWindow(WINDOW *win){
-	int i=0;
+	int i;
 	char c;
-	wmove(win,1,3);
-	while(i<commandLength){
-		c = mvwinch(win,1,3+i);
+
+	for(i=0; i < commandLength; i++){
+		c = mvwinch(win,1,EDIT_START_POSITION+i);
 		line += c;
-		i++;
 	}
 }
 
-void CommandLine::DeleteCharacter(WINDOW *win)
+void CommandLine::deleteCharacter(WINDOW *win)
 {
 	wdelch(win);
 	commandLength--;
 }
 
-void CommandLine::winAddChar(WINDOW *win,int c)
+void CommandLine::winAddChar(WINDOW *win, int c)
 {
-	if(currX<getmaxx(win)-2)
-	{
-		if(commandLength < currX-2)
-		{
-			waddch(win, c);
-			commandLength++;
-			//printf("currX = %d ,commandLength = %d\n",currX,commandLength);
+	if (insertMode) {
+		if (commandLength == MAX_COMMAND_LENGTH) {
+			flash();
+			return;
 		}
-		else if(commandLength+3 < maxX-2 || insertMode)
-		{
-			if(insertMode==true){
-				waddch(win,c);
-				commandLength++;
-			}
-			else{
-				winsch(win,c);
-				if(currX == commandLength+3) commandLength++;
-			}
-
-			wmove(win,currY,currX+1);
-			//commandLength++;
+		winsch(win,c);
+		wmove(win, currY, currX+1);
+        commandLength++;
+	} else {
+		if (currX == EDIT_END_POSITION) {
+			flash();
+			return;
 		}
+		waddch(win, c);
+        if (currX == commandLength + EDIT_START_POSITION) commandLength++;
 	}
-	else
-		flash();
 }
 
 void CommandLine::mouseClick(WINDOW *win){
 	MEVENT mouseEvent;
-	int begX,begY;
-	getbegyx(win,begY,begX);
 	getmouse(&mouseEvent);
-	//printf("mouseX = %d  mouseY = %d  parentX = %d  parentY = %d ",mouseEvent.x,mouseEvent.y,begX,begY);
-	int rangeOfCommand = (mouseEvent.y - begY -1) * (maxX-2) + (mouseEvent.x -minX);
-	if(mouseEvent.x >= minX && mouseEvent.x <= maxX-2 && rangeOfCommand < commandLength+1){
-		if(mouseEvent.y >= begY + minY && mouseEvent.y <= begY+ maxY)
-			wmove(win,mouseEvent.y-begY,mouseEvent.x-begX);
-	}
 
+    if (mouseEvent.y != WIN_TOP + 1) return;
+	if (mouseEvent.x >= EDIT_START_POSITION &&
+		mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+			wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+	}
 }
 
 void CommandLine::homeClick(WINDOW *win){
-	wmove(win,minY,minX);
+	wmove(win,1,EDIT_START_POSITION);
 }
 
 void CommandLine::endClick(WINDOW *win){
-	wmove(win,minY,commandLength+3);
+	wmove(win,1,commandLength+EDIT_START_POSITION);
 }
+
+
+WINDOW *CommandLine::initWindow() {
+	WINDOW *ret;
+
+    initscr();
+    raw();
+//  cbreak();
+    noecho();
+    start_color();
+//  init_pair(RED_BLUE, COLOR_RED, COLOR_BLUE);
+    ret = newwin(WIN_HEIGHT,WIN_WIDTH,WIN_TOP,0);
+    box(ret, 0, 0);
+    mvwaddstr(ret, WIN_HEIGHT-1, WIN_WIDTH - 20, "CTRL-D TO TERMINATE");
+    keypad(ret, true);
+    mousemask(BUTTON1_CLICKED | BUTTON1_DOUBLE_CLICKED, NULL);
+    refresh();
+    return ret;
+}
+
+// #define RED_BLUE 1
 
 /*  Remnants of a trial program written at the beginning of the semester
     wattron(inputWindow, A_STANDOUT);
@@ -194,17 +198,4 @@ void CommandLine::endClick(WINDOW *win){
     wattroff(inputWindow, COLOR_PAIR(RED_BLUE));
     wattroff(inputWindow, A_STANDOUT);
     wrefresh(inputWindow);
-
-    MEVENT mouseEvent;
-        if (c == KEY_MOUSE) {
-            if (getmouse(&mouseEvent) == OK) {
-                if(mouseEvent.bstate & BUTTON1_CLICKED)
-                    mvwprintw(inputWindow, 9, 60, "CLICKED");
-                if(mouseEvent.bstate & BUTTON1_DOUBLE_CLICKED)
-                    mvwprintw(inputWindow, 9, 60, "DBL CLICKED");
-                wprintw(inputWindow, "AT %d, %d, %d",
-                       mouseEvent.x, mouseEvent.y, mouseEvent.z);
-            } else {
-                mvwprintw(inputWindow, 9, 70, "MOUSE_ERR", c);
-            }
  */

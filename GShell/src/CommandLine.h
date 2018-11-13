@@ -16,22 +16,25 @@ public:
 	CommandLine();
 	CommandLine(std::string);
 	virtual ~CommandLine();
-	int edit(WINDOW *win);
+	int edit();
 	void send(int fd);
 	void do_backspace(WINDOW* win);
 
+	static void init();
+
 private:
 	std::string line;
-	static bool insertMode;
-	int minX, minY, currX, currY, maxX, maxY;
-	int eraseCharacter;
+	int currX, currY;
 	int commandLength;
 
-	static void init();
+	static bool insertMode;
+	static int eraseCharacter;
+
 	static void toggleInsertMode();
+	static WINDOW *initWindow();
 	void leftArrow(WINDOW *win);
 	void rightArrow(WINDOW *win);
-	void DeleteCharacter(WINDOW *win);
+	void deleteCharacter(WINDOW *win);
 	void updateLineFromWindow(WINDOW *win);
 	void winAddChar(WINDOW *win,int c);
 	void mouseClick(WINDOW *win);

@@ -16,10 +16,6 @@
 
 #define MASTER_TTY_NAME "/dev/ptmx"
 
-// #define RED_BLUE 1
-WINDOW *inputWindow;
-WINDOW *outputWindow;
-
 void openSlave(int masterFd) {
     struct termios stermios;
     char *slaveDeviceName = ptsname(masterFd);
@@ -55,52 +51,22 @@ void openSlave(int masterFd) {
 }
 
 // Returns non-zero if prompt ($$$) detected
-int lineFdToWin(int fd, WINDOW *win) {
+int fdToStdout(int fd) {
     char c;
-    int x, y, maxx, maxy;
-    int dollars;
-
-    getyx(win, y, x);
-    getmaxyx(win, maxy, maxx);
-    y++;
-    if (y==maxy-1) {
-       wclear(win);
-       y = 1;
-    }
-    wmove(win, y, 1);
-    dollars=0;
+    int dollars = 0;
 
     while(read(fd, &c, 1) == 1) {
-    	//putchar(c);
-        if (c == '\n') {
-            wrefresh(win);
-            return 0;
-        }
-        waddch(win,c);
+    	putchar(c);
+    	if (c == '\n') fflush(stdout);
         if (c == '$') dollars++;
         else dollars=0;
-        if (dollars == 3) return 1;
+        if (dollars == 3) break;
     }
+    fflush(stdout);
+    getchar();
     return 1;
 }
 
-void initWindows() {
-	//CommandLine::insert_mode = true;
-    initscr();
-    raw();
-//    cbreak();
-    noecho();
-    start_color();
-   // init_pair(RED_BLUE, COLOR_RED, COLOR_BLUE);
-    inputWindow = newwin(3,80,21,0);
-    outputWindow = newwin(21,80,0,0);
-    refresh();
-    box(inputWindow, 0, 0);
-    mvwaddstr(inputWindow, 2, 60, "CTRL-D TO TERMINATE");
-    scrollok(outputWindow, true);
-    keypad(inputWindow, true);
-    mousemask(BUTTON1_CLICKED|BUTTON1_DOUBLE_CLICKED, NULL);
-}
 
 int main () {
 
@@ -124,21 +90,16 @@ int main () {
         perror("exec");
         exit(11);
     }
-    initWindows();
-    CommandLine command;
-    //CommandLine::init_insertMode();
+    CommandLine::init();
     int terminator=0;
     do {
-    	command = CommandLine();
-        while(!lineFdToWin(mfd, outputWindow));
-        //wrefresh(outputWindow);
-
-    	terminator = command.edit(inputWindow);
+    	CommandLine command = CommandLine();
+        fdToStdout(mfd);
+    	terminator = command.edit();
     	if (terminator != 4) {
             command.send(mfd);
     	}
     } while(terminator != 4);
-    endwin();
     kill(childPid, SIGTERM);
     wait(NULL);
     close(mfd);
