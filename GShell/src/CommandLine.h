@@ -24,7 +24,7 @@ public:
 
 private:
 	std::string line;
-	int currX, currY;
+	int currX=0, currY=0;
 	int commandLength;
 
 	static bool insertMode;

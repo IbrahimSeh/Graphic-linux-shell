@@ -25,11 +25,12 @@ int CommandLine::eraseCharacter;
 
 CommandLine::CommandLine() {
 	line = "";
-
+    commandLength = 0;
 }
 
 CommandLine::CommandLine(string line) {
 	this->line = line;
+	commandLength = line.length();
 }
 
 CommandLine::~CommandLine() {
