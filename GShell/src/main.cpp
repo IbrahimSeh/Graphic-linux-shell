@@ -52,10 +52,12 @@ void openSlave(int masterFd) {
 
 // Returns non-zero if prompt ($$$) detected
 int fdToStdout(int fd) {
-	int c;
+	char c;
+	int i;
 	int dollars = 0;
 	int flagsFd,flagsStdin;
 
+	// Do not use O_NONBLOCK
 	flagsStdin = fcntl(fileno(stdin),F_GETFL);
 	fcntl(fileno(stdin),F_SETFL,flagsStdin|O_NONBLOCK);
 
@@ -63,6 +65,8 @@ int fdToStdout(int fd) {
 	fcntl(fd,F_SETFL,flagsFd|O_NONBLOCK);
 
 	while(true) {
+		// prepare parameters to select
+		// select (....);
 		if (read(fd, &c, 1) == 1) {
 			putchar(c);
 		    if (c == '\n') fflush(stdout);
@@ -70,10 +74,14 @@ int fdToStdout(int fd) {
 		    else dollars=0;
 		    if (dollars == 3) break;
 		}
-        c = getchar();
-        if (c != -1) write(fd, &c, 1);
+        i = getchar();
+        if (i != -1) {
+        	c = i;
+        	write(fd, &c, 1);
+        }
 	}
 
+	// Do not use O_NONBLOCK
 	fcntl(fileno(stdin),F_SETFL,flagsStdin);
 	fcntl(fd,F_SETFL,flagsFd);
 	fflush(stdout);

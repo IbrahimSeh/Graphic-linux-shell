@@ -47,7 +47,7 @@ int CommandLine::edit() {
 	while (true) {
 		getyx(win,currY, currX);
 		c=wgetch(win);
-		if (c == eraseCharacter) {
+		if (c == eraseCharacter || c == KEY_BACKSPACE) {
 			leftArrow(win);
 			deleteCharacter(win);
 		} else if (c < KEY_MIN && isprint(c)) {
@@ -173,7 +173,7 @@ void CommandLine::endClick(WINDOW *win){
 WINDOW *CommandLine::initWindow() {
 	WINDOW *ret;
 
-    initscr();
+    newterm(NULL, stdout, stdin);
     raw();
 //  cbreak();
     noecho();
