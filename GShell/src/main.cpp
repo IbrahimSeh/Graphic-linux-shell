@@ -57,16 +57,14 @@ int fdToStdout(int fd) {
 	int dollars = 0;
 	int flagsFd,flagsStdin;
 
-	// Do not use O_NONBLOCK
-	flagsStdin = fcntl(fileno(stdin),F_GETFL);
-	fcntl(fileno(stdin),F_SETFL,flagsStdin|O_NONBLOCK);
-
-	flagsFd = fcntl(fd,F_GETFL);
-	fcntl(fd,F_SETFL,flagsFd|O_NONBLOCK);
+	fd_set rfds;
+	int retSelect;
 
 	while(true) {
-		// prepare parameters to select
-		// select (....);
+		FD_ZERO(&rfds);
+		FD_SET(fd,&rfds);
+		FD_SET(fileno(stdin),&rfds);
+		select(2,&rfds,NULL,NULL,NULL);
 		if (read(fd, &c, 1) == 1) {
 			putchar(c);
 		    if (c == '\n') fflush(stdout);
@@ -81,9 +79,6 @@ int fdToStdout(int fd) {
         }
 	}
 
-	// Do not use O_NONBLOCK
-	fcntl(fileno(stdin),F_SETFL,flagsStdin);
-	fcntl(fd,F_SETFL,flagsFd);
 	fflush(stdout);
 	getchar();
 	return 1;
