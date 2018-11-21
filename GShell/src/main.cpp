@@ -53,28 +53,25 @@ void openSlave(int masterFd) {
 // Returns non-zero if prompt ($$$) detected
 int fdToStdout(int fd) {
 	char c;
-	int i;
 	int dollars = 0;
-	int flagsFd,flagsStdin;
 
-	fd_set rfds;
-	int retSelect;
+	fd_set fds;
 
 	while(true) {
-		FD_ZERO(&rfds);
-		FD_SET(fd,&rfds);
-		FD_SET(fileno(stdin),&rfds);
-		select(2,&rfds,NULL,NULL,NULL);
-		if (read(fd, &c, 1) == 1) {
+		FD_ZERO(&fds);
+		FD_SET(fd,&fds);
+		FD_SET(fileno(stdin),&fds);
+		select(fd+1,&fds,NULL,NULL,NULL);
+		if (FD_ISSET(fd,&fds)) {
+			read(fd, &c, 1);
 			putchar(c);
 		    if (c == '\n') fflush(stdout);
 		    if (c == '$') dollars++;
 		    else dollars=0;
 		    if (dollars == 3) break;
 		}
-        i = getchar();
-        if (i != -1) {
-        	c = i;
+		if(FD_ISSET(fileno(stdin),&fds)){
+			c = getchar();
         	write(fd, &c, 1);
         }
 	}
