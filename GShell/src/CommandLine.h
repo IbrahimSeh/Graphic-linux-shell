@@ -15,6 +15,7 @@ class CommandLine {
 public:
 	CommandLine();
 	CommandLine(std::string);
+	CommandLine(char);
 	virtual ~CommandLine();
 	int edit();
 	void send(int fd);

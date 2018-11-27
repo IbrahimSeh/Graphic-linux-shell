@@ -51,7 +51,7 @@ void openSlave(int masterFd) {
 }
 
 // Returns non-zero if prompt ($$$) detected
-int fdToStdout(int fd) {
+char fdToStdout(int fd) {
 	int i;
 	char c;
 	int dollars = 0;
@@ -88,8 +88,7 @@ int fdToStdout(int fd) {
 	fcntl(fd,F_SETFL,flagsFd);
 
 	fflush(stdout);
-	getchar();
-	return 1;
+	return getchar();
 }
 
 
@@ -118,8 +117,13 @@ int main () {
 	CommandLine::init();
 	int terminator=0;
 	do {
-		CommandLine command = CommandLine();
-		fdToStdout(mfd);
+		CommandLine command;
+		char c = fdToStdout(mfd);
+		if (isprint(c)) {
+		    command = CommandLine(c);
+		} else {
+		    command = CommandLine();
+		}
 		terminator = command.edit();
 		if (terminator != 4) {
 			command.send(mfd);

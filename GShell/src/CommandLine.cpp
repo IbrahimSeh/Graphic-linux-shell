@@ -24,14 +24,21 @@ int CommandLine::eraseCharacter;
 
 
 CommandLine::CommandLine() {
-	line = "";
-    commandLength = 0;
+	this->line = line;
+	commandLength = 0;
 }
 
 CommandLine::CommandLine(string line) {
 	this->line = line;
 	commandLength = line.length();
 }
+
+CommandLine::CommandLine(char c) {
+	line = "";
+	line += c;
+	commandLength = 1;
+}
+
 
 CommandLine::~CommandLine() {
 }
@@ -118,6 +125,7 @@ void CommandLine::updateLineFromWindow(WINDOW *win){
 	int i;
 	char c;
 
+	line = "";
 	for(i=0; i < commandLength; i++){
 		c = mvwinch(win,1,EDIT_START_POSITION+i);
 		line += c;
