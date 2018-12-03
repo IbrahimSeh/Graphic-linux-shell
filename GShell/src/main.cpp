@@ -57,23 +57,24 @@ char fdToStdout(int fd) {
 	int dollars = 0;
 	fd_set fds;
 	int flagsFd,flagsStdin;
-	struct termios stermios;
-	if (tcgetattr(fileno(stdin), &stermios) < 0) {
-			perror("tcgetattr");
-			exit (21);
-		}
-	stermios.c_lflag &= ~(ECHONL | ICANON | IEXTEN | ISIG);
-	if (tcsetattr(fileno(stdin), TCSANOW, &stermios) < 0) {
-		perror("tcsetattr");
-		exit (22);
-	}
+	struct termios termios;
+
 	flagsStdin = fcntl(fileno(stdin),F_GETFL);
 	fcntl(fileno(stdin),F_SETFL,flagsStdin|O_NONBLOCK);
 	flagsFd = fcntl(fd,F_GETFL);
 	fcntl(fd,F_SETFL,flagsFd|O_NONBLOCK);
 
-	while(true) {
+	if (tcgetattr(fileno(stdin), &termios) < 0) {
+		perror("tcgetattr");
+		exit (21);
+	}
+	termios.c_lflag &= ~ICANON;
+	if (tcsetattr(fileno(stdin), TCSANOW, &termios) < 0) {
+		perror("tcsetattr");
+		exit (22);
+	}
 
+	while(true) {
 		FD_ZERO(&fds);
 		FD_SET(fd,&fds);
 		FD_SET(fileno(stdin),&fds);
@@ -92,17 +93,17 @@ char fdToStdout(int fd) {
 	        	write(fd, &c, 1);
 			}
         }
-		stermios.c_lflag &= (ECHO | ECHONL | ICANON | IEXTEN | ISIG);
 	}
 
 	fcntl(fileno(stdin),F_SETFL,flagsStdin);
 	fcntl(fd,F_SETFL,flagsFd);
 
-	stermios.c_lflag |= (ECHONL | ICANON | IEXTEN | ISIG);
-	if (tcsetattr(fileno(stdin), TCSANOW, &stermios) < 0) {
+	termios.c_lflag |= ICANON;
+	if (tcsetattr(fileno(stdin), TCSANOW, &termios) < 0) {
 		perror("tcsetattr");
 		exit (22);
 	}
+
 	fflush(stdout);
 	return getchar();
 }
