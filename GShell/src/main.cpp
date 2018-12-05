@@ -98,6 +98,8 @@ char fdToStdout(int fd) {
 	fcntl(fileno(stdin),F_SETFL,flagsStdin);
 	fcntl(fd,F_SETFL,flagsFd);
 
+	c = getchar();
+
 	termios.c_lflag |= ICANON;
 	if (tcsetattr(fileno(stdin), TCSANOW, &termios) < 0) {
 		perror("tcsetattr");
@@ -105,7 +107,7 @@ char fdToStdout(int fd) {
 	}
 
 	fflush(stdout);
-	return getchar();
+	return c;
 }
 
 
