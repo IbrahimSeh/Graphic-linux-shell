@@ -15,7 +15,6 @@
 #include "CommandLine.h"
 
 #define MASTER_TTY_NAME "/dev/ptmx"
-#define HISTORY_BASE_SIZE 100
 
 void openSlave(int masterFd) {
 	struct termios stermios;
@@ -113,9 +112,6 @@ char fdToStdout(int fd) {
 
 
 int main () {
-	CommandLine *history = new CommandLine[HISTORY_BASE_SIZE];
-	int current_i_history = 0;
-	int last_i_history=0;
 
 	int mfd = open (MASTER_TTY_NAME, O_RDWR);
 	if (mfd == -1) {
@@ -140,34 +136,16 @@ int main () {
 	CommandLine::init();
 	int terminator=0;
 	do {
-		CommandLine command;
+		CommandLine *command;
 		char c = fdToStdout(mfd);
 		if (isprint(c)) {
-		    command = CommandLine(c);
+		    command = new CommandLine(c);
 		} else {
-		    command = CommandLine();
+		    command = new CommandLine();
 		}
-		terminator = command.edit();
-		while(terminator == KEY_UP || terminator == KEY_DOWN)
-		{
-			if(terminator == KEY_UP){
-				if(current_i_history > 0)
-					current_i_history--;
-			}
-			else if(terminator == KEY_DOWN){
-				if(current_i_history < last_i_history)
-					current_i_history++;
-			}
-			terminator = history[current_i_history].edit();
-			command = CommandLine(history[current_i_history].getTheString().c_str());
-		}
-
+		terminator = command->edit();
 		if (terminator != 4) {
-			history[last_i_history] = CommandLine(command.getTheString());
-			//printf("%d %s\n",last_i_history , history[last_i_history].getTheString().c_str());
-			command.send(mfd);
-			last_i_history++;
-			current_i_history = last_i_history;
+			command->send(mfd);
 		}
 	} while(terminator != 4);
 	kill(childPid, SIGTERM);

@@ -12,6 +12,9 @@
 #include <ncurses.h>
 #include <string>
 
+#include "History.h"
+
+
 class CommandLine {
 public:
 	CommandLine();
@@ -32,6 +35,7 @@ private:
 
 	static bool insertMode;
 	static int eraseCharacter;
+	static History<CommandLine> history;
 
 	static void toggleInsertMode();
 	static WINDOW *initWindow();

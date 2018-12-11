@@ -21,7 +21,7 @@ using namespace std;
 
 bool CommandLine::insertMode;
 int CommandLine::eraseCharacter;
-
+History<CommandLine> history = History<CommandLine>(HISTORY_DEFAULT_SIZE);
 
 CommandLine::CommandLine() {
 	this->line = line;
