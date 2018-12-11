@@ -31,6 +31,7 @@ CommandLine::CommandLine() {
 CommandLine::CommandLine(string line) {
 	this->line = line;
 	commandLength = line.length();
+
 }
 
 CommandLine::CommandLine(char c) {
@@ -41,6 +42,10 @@ CommandLine::CommandLine(char c) {
 
 
 CommandLine::~CommandLine() {
+}
+
+string CommandLine::getTheString(){
+	return line;
 }
 
 int CommandLine::edit() {
@@ -131,6 +136,7 @@ void CommandLine::updateLineFromWindow(WINDOW *win){
 		line += c;
 	}
 }
+
 
 void CommandLine::deleteCharacter(WINDOW *win)
 {

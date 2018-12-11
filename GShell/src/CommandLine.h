@@ -8,6 +8,7 @@
 #ifndef COMMANDLINE_H_
 #define COMMANDLINE_H_
 
+
 #include <ncurses.h>
 #include <string>
 
@@ -17,6 +18,7 @@ public:
 	CommandLine(std::string);
 	CommandLine(char);
 	virtual ~CommandLine();
+	std::string getTheString();
 	int edit();
 	void send(int fd);
 	void do_backspace(WINDOW* win);
