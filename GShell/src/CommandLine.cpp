@@ -99,6 +99,7 @@ int CommandLine::edit() {
 			default:
 				updateLineFromWindow(win);
 				endwin();
+				if(c!=4) history.append(this);
 				return c;
 			}
 		}
