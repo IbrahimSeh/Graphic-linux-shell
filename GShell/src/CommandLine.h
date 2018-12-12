@@ -25,6 +25,8 @@ public:
 	int edit();
 	void send(int fd);
 	void do_backspace(WINDOW* win);
+	void upClick();
+	void downClick();
 
 	static void init();
 

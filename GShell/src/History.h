@@ -21,6 +21,7 @@ public:
 private:
 	HistoryItem **items;
 	bool isEmpty;
+	bool isFull;
 	int size;
 	int current;
 	int first;

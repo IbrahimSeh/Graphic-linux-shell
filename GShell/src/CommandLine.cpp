@@ -21,7 +21,7 @@ using namespace std;
 
 bool CommandLine::insertMode;
 int CommandLine::eraseCharacter;
-History<CommandLine> history = History<CommandLine>(HISTORY_DEFAULT_SIZE);
+History<CommandLine> CommandLine::history = History<CommandLine>(HISTORY_DEFAULT_SIZE);
 
 CommandLine::CommandLine() {
 	this->line = line;
@@ -63,7 +63,7 @@ int CommandLine::edit() {
 			leftArrow(win);
 			deleteCharacter(win);
 		} else if (c < KEY_MIN && isprint(c)) {
-				winAddChar(win,c);
+			winAddChar(win,c);
 		} else {
 			switch(c){
 			case KEY_IC:
@@ -89,6 +89,12 @@ int CommandLine::edit() {
 				break;
 			case KEY_END:
 				endClick(win);
+				break;
+			case KEY_UP:
+				upClick();
+				break;
+			case KEY_DOWN:
+				downClick();
 				break;
 			default:
 				updateLineFromWindow(win);
@@ -153,14 +159,14 @@ void CommandLine::winAddChar(WINDOW *win, int c)
 		}
 		winsch(win,c);
 		wmove(win, currY, currX+1);
-        commandLength++;
+		commandLength++;
 	} else {
 		if (currX == EDIT_END_POSITION) {
 			flash();
 			return;
 		}
 		waddch(win, c);
-        if (currX == commandLength + EDIT_START_POSITION) commandLength++;
+		if (currX == commandLength + EDIT_START_POSITION) commandLength++;
 	}
 }
 
@@ -168,10 +174,10 @@ void CommandLine::mouseClick(WINDOW *win){
 	MEVENT mouseEvent;
 	getmouse(&mouseEvent);
 
-    if (mouseEvent.y != WIN_TOP + 1) return;
+	if (mouseEvent.y != WIN_TOP + 1) return;
 	if (mouseEvent.x >= EDIT_START_POSITION &&
-		mouseEvent.x <= commandLength + EDIT_START_POSITION) {
-			wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+			mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+		wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
 	}
 }
 
@@ -183,23 +189,32 @@ void CommandLine::endClick(WINDOW *win){
 	wmove(win,1,commandLength+EDIT_START_POSITION);
 }
 
+void CommandLine::upClick()
+{
+	history.up()->edit();
+}
+
+void CommandLine::downClick()
+{
+	history.down()->edit();
+}
 
 WINDOW *CommandLine::initWindow() {
 	WINDOW *ret;
 
-    newterm(NULL, stdout, stdin);
-    raw();
-//  cbreak();
-    noecho();
-    start_color();
-//  init_pair(RED_BLUE, COLOR_RED, COLOR_BLUE);
-    ret = newwin(WIN_HEIGHT,WIN_WIDTH,WIN_TOP,0);
-    box(ret, 0, 0);
-    mvwaddstr(ret, WIN_HEIGHT-1, WIN_WIDTH - 20, "CTRL-D TO TERMINATE");
-    keypad(ret, true);
-    mousemask(BUTTON1_CLICKED | BUTTON1_DOUBLE_CLICKED, NULL);
-    refresh();
-    return ret;
+	newterm(NULL, stdout, stdin);
+	raw();
+	//  cbreak();
+	noecho();
+	start_color();
+	//  init_pair(RED_BLUE, COLOR_RED, COLOR_BLUE);
+	ret = newwin(WIN_HEIGHT,WIN_WIDTH,WIN_TOP,0);
+	box(ret, 0, 0);
+	mvwaddstr(ret, WIN_HEIGHT-1, WIN_WIDTH - 20, "CTRL-D TO TERMINATE");
+	keypad(ret, true);
+	mousemask(BUTTON1_CLICKED | BUTTON1_DOUBLE_CLICKED, NULL);
+	refresh();
+	return ret;
 }
 
 // #define RED_BLUE 1

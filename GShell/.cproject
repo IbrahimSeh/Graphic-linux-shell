@@ -48,9 +48,6 @@
 						</toolChain>
 					</folderInfo>
 					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.146797502.1338281023" name="History.h" rcbsApplicability="disable" resourcePath="src/History.h" toolsToInvoke=""/>
-					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.146797502.1684537928" name="History.cpp" rcbsApplicability="disable" resourcePath="src/History.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1656952558.2026072106">
-						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1656952558.2026072106" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1656952558"/>
-					</fileInfo>
 					<sourceEntries>
 						<entry excluding="History.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
