@@ -20,13 +20,13 @@ public:
 	CommandLine();
 	CommandLine(std::string);
 	CommandLine(char);
+	CommandLine(CommandLine &);
+	const CommandLine & operator= (const CommandLine &);
 	virtual ~CommandLine();
 	std::string getTheString();
 	int edit();
 	void send(int fd);
 	void do_backspace(WINDOW* win);
-	void upClick();
-	void downClick();
 
 	static void init();
 
@@ -47,9 +47,11 @@ private:
 	void updateLineFromWindow(WINDOW *win);
 	void winAddChar(WINDOW *win,int c);
 	void mouseClick(WINDOW *win);
-	void homeClick(WINDOW *win);
-	void endClick(WINDOW *win);
-
+	void homeKey(WINDOW *win);
+	void endKey(WINDOW *win);
+	void upArrow(WINDOW *win);
+	void downArrow(WINDOW *win);
+	void restartEdit(WINDOW *win);
 };
 
 #endif /* COMMANDLINE_H_ */

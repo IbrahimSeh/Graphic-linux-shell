@@ -31,7 +31,11 @@ CommandLine::CommandLine() {
 CommandLine::CommandLine(string line) {
 	this->line = line;
 	commandLength = line.length();
+}
 
+CommandLine::CommandLine(CommandLine &other) {
+	this->line = other.line;
+	commandLength = line.length();
 }
 
 CommandLine::CommandLine(char c) {
@@ -40,6 +44,11 @@ CommandLine::CommandLine(char c) {
 	commandLength = 1;
 }
 
+const CommandLine & CommandLine::operator= (const CommandLine &rhs) {
+	this->line = rhs.line;
+	commandLength = line.length();
+	return *this;
+}
 
 CommandLine::~CommandLine() {
 }
@@ -85,21 +94,23 @@ int CommandLine::edit() {
 				mouseClick(win);
 				break;
 			case KEY_HOME:
-				homeClick(win);
+				homeKey(win);
 				break;
 			case KEY_END:
-				endClick(win);
+				endKey(win);
 				break;
 			case KEY_UP:
-				upClick();
+				upArrow(win);
 				break;
 			case KEY_DOWN:
-				downClick();
+				downArrow(win);
 				break;
 			default:
 				updateLineFromWindow(win);
 				endwin();
-				if(c!=4) history.append(this);
+				if (c != 4) {
+					history.append(this);
+				}
 				return c;
 			}
 		}
@@ -182,22 +193,39 @@ void CommandLine::mouseClick(WINDOW *win){
 	}
 }
 
-void CommandLine::homeClick(WINDOW *win){
+void CommandLine::homeKey(WINDOW *win){
 	wmove(win,1,EDIT_START_POSITION);
 }
 
-void CommandLine::endClick(WINDOW *win){
+void CommandLine::endKey(WINDOW *win){
 	wmove(win,1,commandLength+EDIT_START_POSITION);
 }
 
-void CommandLine::upClick()
-{
-	history.up()->edit();
+void CommandLine::restartEdit(WINDOW *win) {
+	wclear(win);
+	box(win, 0, 0);
+	mvwaddstr(win, WIN_HEIGHT-1, WIN_WIDTH - 20, "CTRL-D TO TERMINATE");
+	wmove(win, 1, EDIT_START_POSITION);
+	waddstr(win, line.c_str());
 }
 
-void CommandLine::downClick()
+
+void CommandLine::upArrow(WINDOW *win)
 {
-	history.down()->edit();
+	CommandLine *other = history.up();
+	if (other) {
+		*this = *other;
+		restartEdit(win);
+	}
+}
+
+void CommandLine::downArrow(WINDOW *win)
+{
+	CommandLine *other = history.down();
+	if (other) {
+		*this = *other;
+		restartEdit(win);
+	}
 }
 
 WINDOW *CommandLine::initWindow() {
