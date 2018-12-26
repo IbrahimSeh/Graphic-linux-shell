@@ -15,20 +15,16 @@ class History {
 public:
 	History(int size=HISTORY_DEFAULT_SIZE);
 	void append(HistoryItem *);
+	void goPastEnd();
 	HistoryItem *up();
 	HistoryItem *down();
 	virtual ~History();
 private:
-	HistoryItem **items;
-	bool isEmpty, isFull;
-	int size;
-	int current;
-	int first;  // points to the first element of history
-	            // if empty it is last + 1 (mod size)
-	int last;   // points to the last element of history
-                // if empty it is first - 1 (mod size)
-	            // We have the same situation also when list is full
-	            // we distinguish using the flag isEmpty
+	struct element {
+		HistoryItem *item;
+		struct element *next, *prev;
+	};
+	struct element *first, *last, *current;
 };
 
 #include "History.cpp"

@@ -65,6 +65,7 @@ int CommandLine::edit() {
 	commandLength = line.length();
 	wmove(win, 1, EDIT_START_POSITION);
 	waddstr(win, line.c_str());
+	history.goPastEnd();
 	while (true) {
 		getyx(win,currY, currX);
 		c=wgetch(win);
