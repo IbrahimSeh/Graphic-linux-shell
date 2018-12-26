@@ -12,6 +12,7 @@ History<HistoryItem>::History(int size) {
 	this->size = size;
 	items = new HistoryItem*[size];
 	isEmpty = true;
+	isFull = false;
 	first = 0;
 	last = size - 1;
 	current = last;
@@ -34,7 +35,9 @@ void History<HistoryItem>::append(HistoryItem *item){
 	items[last] = item;
 	current = last;
 	isEmpty=false;
-	if (first == last && !isEmpty) {
+	if(first == 0 && last == size - 1)
+		isFull=true;
+	if (first == last && isFull) {
 		first++;
 		first %= size;
 	}
@@ -44,26 +47,34 @@ template <class HistoryItem>
 HistoryItem *History<HistoryItem>::up()
 {
 	if (isEmpty) return NULL;
-	if (current != first) {
-	    if (current == 0) {
-	    	current = size -1;
-	    } else {
-	    	current--;
-	    }
+	int tcurrent = current;
+	if(current != first)
+	{
+		current--;
+		current %= size;
+		if(current<0) current = size - current;
 	}
-    return items[current];
+	else
+		return items[first];
+	return items[tcurrent];
 }
 
 template <class HistoryItem>
 HistoryItem *History<HistoryItem>::down()
 {
 	if (isEmpty) return NULL;
-	if (current != last) {
-	    if (current == size - 1) {
-	    	current = 0;
-	    } else {
-	    	current++;
-	    }
+	int tcurrent = current;//the next current
+	tcurrent++;
+	if(current != last)
+	{
+		current++;
+		current %= size;
 	}
-    return items[current];
+	else
+		return items[last];
+	return items[tcurrent];
 }
+
+
+
+

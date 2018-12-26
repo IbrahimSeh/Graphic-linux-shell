@@ -20,7 +20,7 @@ public:
 	virtual ~History();
 private:
 	HistoryItem **items;
-	bool isEmpty;
+	bool isEmpty, isFull;
 	int size;
 	int current;
 	int first;  // points to the first element of history
