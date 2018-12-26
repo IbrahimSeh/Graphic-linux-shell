@@ -3,8 +3,6 @@
        not GShell
        
 2) Implement the history class
-   a) Ever6y command is added to history when sent to shell
-   b) for this commands have to be dynamically allocated
    c) implement history.choose by which a user can use up and down arrows and 
       mount to choose a command from history. The chosen command remains intact and copied into 
       a new command that can further be edited.
