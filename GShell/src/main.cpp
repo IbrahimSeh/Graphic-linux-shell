@@ -12,6 +12,7 @@
 #include <signal.h>
 #include <ncurses.h>
 
+
 #include "CommandLine.h"
 
 #define MASTER_TTY_NAME "/dev/ptmx"

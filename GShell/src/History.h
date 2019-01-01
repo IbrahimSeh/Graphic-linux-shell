@@ -7,7 +7,6 @@
 
 #ifndef HISTORY_H_
 #define HISTORY_H_
-
 #define HISTORY_DEFAULT_SIZE 100
 
 template <class HistoryItem>
@@ -25,6 +24,7 @@ private:
 		struct element *next, *prev;
 	};
 	struct element *first, *last, *current;
+	int count;
 };
 
 #include "History.cpp"

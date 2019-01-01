@@ -9,7 +9,8 @@
 
 template <class HistoryItem>
 History<HistoryItem>::History(int size) {
-	first = last = current = NULL;;
+	first = last = current = NULL;
+	count = 0;
 }
 
 template <class HistoryItem>
@@ -21,10 +22,12 @@ History<HistoryItem>::~History() {
 		p=p->next;
 	    delete q;
 	}
+
 }
 
 template <class HistoryItem>
 void History<HistoryItem>::append(HistoryItem *item){
+	if(count == HISTORY_DEFAULT_SIZE) return ;
 	struct element *p = new struct element;
 	p->item = item;
 	p->next = NULL;
@@ -36,6 +39,7 @@ void History<HistoryItem>::append(HistoryItem *item){
 	}
 	last = p;
 	current = p;
+	count++;
 }
 
 template <class HistoryItem>
@@ -62,3 +66,4 @@ HistoryItem *History<HistoryItem>::down()
 	if (current != NULL && current != last) current = current->next;
 	return current->item;
 }
+

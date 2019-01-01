@@ -7,11 +7,13 @@
 
 #ifndef COMMANDLINE_H_
 #define COMMANDLINE_H_
-
-
+#define WIN_WIDTH 80
+#define HISTORY_DEFAULT_SIZE 100
+#include <menu.h>
 #include <ncurses.h>
 #include <string>
-
+#include <cstring>
+#include <unistd.h>
 #include "History.h"
 
 
@@ -34,7 +36,8 @@ private:
 	std::string line;
 	int currX=0, currY=0;
 	int commandLength;
-
+	static int countItems;
+	static char menuItems[HISTORY_DEFAULT_SIZE][WIN_WIDTH];
 	static bool insertMode;
 	static int eraseCharacter;
 	static History<CommandLine> history;
@@ -52,6 +55,8 @@ private:
 	void upArrow(WINDOW *win);
 	void downArrow(WINDOW *win);
 	void restartEdit(WINDOW *win);
+	std::string showHistory(WINDOW *win);
+	void drawmenu(WINDOW *win, int starty, int startx, int width, std::string str, chtype color);
 };
 
 #endif /* COMMANDLINE_H_ */
