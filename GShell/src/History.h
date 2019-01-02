@@ -9,6 +9,8 @@
 #define HISTORY_H_
 #define HISTORY_DEFAULT_SIZE 100
 
+#include <menu.h>
+
 template <class HistoryItem>
 class History {
 public:
@@ -17,6 +19,9 @@ public:
 	void goPastEnd();
 	HistoryItem *up();
 	HistoryItem *down();
+	int getCount() {return count;}
+	int getSize() {return size;}
+	char *showHistory();
 	virtual ~History();
 private:
 	struct element {
@@ -24,7 +29,17 @@ private:
 		struct element *next, *prev;
 	};
 	struct element *first, *last, *current;
+	int size;
 	int count;
+
+	// TODO: Make them a separate object
+	ITEM **my_items;
+	MENU *my_menu;
+	WINDOW *my_menu_win;
+
+	void unpostAndFree(MENU *my_menu, ITEM **my_items);
+	void initMenu();
+	void endMenu();
 };
 
 #include "History.cpp"

@@ -1,0 +1,183 @@
+/*
+ * History.cpp
+ *
+ *  Created on: Dec 11, 2018
+ *      Author: root
+ */
+
+#include "History.h"
+
+#define
+
+template <class HistoryItem>
+History<HistoryItem>::History(int size) {
+	this->size = size;
+	first = last = current = NULL;
+	count = 0;
+}
+
+template <class HistoryItem>
+History<HistoryItem>::~History() {
+	struct element *p, *q;
+	p = first;
+	while (p) {
+		q=p;
+		p=p->next;
+		delete q;
+	}
+
+}
+
+template <class HistoryItem>
+void History<HistoryItem>::append(HistoryItem *item){
+	if(count == size) return ;
+	struct element *p = new struct element;
+	p->item = item;
+	p->next = NULL;
+	p->prev = last;
+	if (last) {
+		last->next = p;
+	} else {
+		first=p;
+	}
+	last = p;
+	current = p;
+	count++;
+}
+
+template <class HistoryItem>
+void History<HistoryItem>::goPastEnd()
+{
+	current=NULL;
+}
+
+
+template <class HistoryItem>
+HistoryItem *History<HistoryItem>::up()
+{
+	if (!first) return NULL;
+	if (current == NULL) {
+		current = last;
+	} else if (current != first) current = current->prev;
+	return current ? current->item : NULL;
+}
+
+template <class HistoryItem>
+HistoryItem *History<HistoryItem>::down()
+{
+	if (!first) return NULL;
+	if (current != NULL && current != last) current = current->next;
+	return current ? current->item : NULL;
+}
+
+template <class HistoryItem>
+HistoryItem *   History<HistoryItem>::showHistory()
+{
+	ITEM **my_items;
+	MENU *my_menu;
+	WINDOW *my_menu_win;
+	int c, i;
+	char *tline;
+	struct element *ret = NULL;
+
+	/* Create items */
+	my_items = new ITEM * [count];
+	struct element *p=first;
+
+	while(p) {
+		my_items[i] = new_item(p->item->getTheString().c_str(),NULL);
+		p = p->next;
+	}
+	/* Create menu */
+	my_menu = new_menu(my_items);
+
+	/* Create the window to be associated with the menu */
+	my_menu_win = newwin(10, 40, 4, 4);
+	keypad(my_menu_win, TRUE);
+
+	/* Set main window and sub window */
+	set_menu_win(my_menu, my_menu_win);
+	set_menu_sub(my_menu, derwin(my_menu_win, 6, 38, 3, 1));
+	set_menu_format(my_menu, 5, 1);
+
+	/* Set menu mark to the string " * " */
+	set_menu_mark(my_menu, " * ");
+
+	/* Print a border around the main window and print a title */
+	box(my_menu_win, 0, 0);
+	drawmenu(my_menu_win, 1, 0, 40, "My Menu", COLOR_PAIR(1));
+	mvwaddch(my_menu_win, 2, 0, ACS_LTEE);
+	mvwhline(my_menu_win, 2, 1, ACS_HLINE, 38);
+	mvwaddch(my_menu_win, 2, 39, ACS_RTEE);
+
+	/* Post the menu */
+	post_menu(my_menu);
+	wrefresh(my_menu_win);
+
+	attron(COLOR_PAIR(2));
+	mvprintw(LINES - 2, 0, "Use PageUp and PageDown to scoll down or up a page of items");
+	mvprintw(LINES - 1, 0, "Arrow Keys to navigate (CTRL_D to Exit)");
+	attroff(COLOR_PAIR(2));
+	refresh();
+
+	while((c = wgetch(my_menu_win)) != CTRL_D) {
+		switch(c) {
+		case KEY_DOWN:
+			menu_driver(my_menu, REQ_DOWN_ITEM);
+			break;
+		case KEY_UP:
+			menu_driver(my_menu, REQ_UP_ITEM);
+			break;
+		case KEY_NPAGE:
+			menu_driver(my_menu, REQ_SCR_DPAGE);
+			break;
+		case KEY_PPAGE:
+			menu_driver(my_menu, REQ_SCR_UPAGE);
+			break;
+		case'\n':
+			mvwinstr(my_menu_win,0,5,tline);
+			UnpostAndFree(my_menu,my_items);
+			return ret->item;
+			break;
+		}
+		wrefresh(my_menu_win);
+	}
+	UnpostAndFree(my_menu,my_items);
+	return ret ? ret->item : NULL;
+}
+
+template <class HistoryItem>
+void History<HistoryItem>::UnpostAndFree(MENU *my_menu, ITEM **my_items) {
+
+	int i;
+	unpost_menu(my_menu);
+	free_menu(my_menu);
+	for(i = 0; i < count; ++i)
+		free_item(my_items[i]);
+	delete my_items;
+	endwin();
+}
+
+template <class HistoryItem>
+void  History<HistoryItem>::drawmenu(WINDOW *win, int starty, int startx, int width, std::string str, chtype color)
+{
+	int length, x, y;
+	float temp;
+	if(win == NULL)
+		win = stdscr;
+	getyx(win, y, x);
+	if(startx != 0)
+		x = startx;
+	if(starty != 0)
+		y = starty;
+	if(width == 0)
+		width = 80;
+	length = str.length();
+	temp = (width - length)/ 2;
+	x = startx + (int)temp;
+	wattron(win, color);
+	mvwprintw(win,y, x,"%s",str.c_str());
+	wattroff(win, color);
+	refresh();
+
+}

@@ -18,15 +18,11 @@
 #define EDIT_END_POSITION WIN_WIDTH - 2
 #define MAX_COMMAND_LENGTH EDIT_END_POSITION - EDIT_START_POSITION + 1
 #define CTRL_A 1
-#define CTRL_Q 17
 #define HISTORY_DEFAULT_SIZE 100
-#define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
 using namespace std;
 
-int CommandLine::countItems;
 bool CommandLine::insertMode;
 int CommandLine::eraseCharacter;
-char CommandLine::menuItems[HISTORY_DEFAULT_SIZE][WIN_WIDTH];
 History<CommandLine> CommandLine::history = History<CommandLine>(HISTORY_DEFAULT_SIZE);
 
 CommandLine::CommandLine() {
@@ -59,10 +55,13 @@ const CommandLine & CommandLine::operator= (const CommandLine &rhs) {
 CommandLine::~CommandLine() {
 }
 
-string CommandLine::getTheString(){//not in use
+string CommandLine::getTheString(){
 	return line;
 }
 
+void CommandLine::setTheString(std::string str){
+	 line = str;
+}
 int CommandLine::edit() {
 	int c;
 
@@ -136,7 +135,6 @@ void CommandLine::send(int fd) {
 
 void CommandLine::init(){
 	insertMode= false;
-	countItems=0;
 	toggleInsertMode();
 }
 
@@ -163,7 +161,7 @@ void CommandLine::updateLineFromWindow(WINDOW *win){
 		c = mvwinch(win,1,EDIT_START_POSITION+i);
 		line += c;
 	}
-	strcpy(menuItems[countItems++],line.c_str());
+
 }
 
 
@@ -239,114 +237,17 @@ void CommandLine::downArrow(WINDOW *win)
 	}
 }
 
-std::string CommandLine::showHistory(WINDOW *win)
+void  CommandLine::showHistory(WINDOW *win)
 {
-	ITEM **my_items;
-	MENU *my_menu;
-	WINDOW *my_menu_win;
-	int c, n_choices, i;
-	std::string tline;
-	bool break_while = false;
-	/* Initialize curses */
-	initscr();
-	start_color();
-	cbreak();
-	noecho();
-	keypad(stdscr, TRUE);
-	init_pair(1, COLOR_RED, COLOR_BLACK);
-	init_pair(2, COLOR_CYAN, COLOR_BLACK);
-
-	/* Create items */
-	n_choices = ARRAY_SIZE(menuItems);
-	my_items = (ITEM **)calloc(n_choices, sizeof(ITEM *));
-	for(i = 0; i < n_choices; ++i)
-		my_items[i] = new_item(menuItems[i],NULL);
-
-	/* Crate menu */
-	my_menu = new_menu((ITEM **)my_items);
-
-	/* Create the window to be associated with the menu */
-	my_menu_win = newwin(10, 40, 4, 4);
-	keypad(my_menu_win, TRUE);
-
-	/* Set main window and sub window */
-	set_menu_win(my_menu, my_menu_win);
-	set_menu_sub(my_menu, derwin(my_menu_win, 6, 38, 3, 1));
-	set_menu_format(my_menu, 5, 1);
-
-	/* Set menu mark to the string " * " */
-	set_menu_mark(my_menu, " * ");
-
-	/* Print a border around the main window and print a title */
-	box(my_menu_win, 0, 0);
-	drawmenu(my_menu_win, 1, 0, 40, "My Menu", COLOR_PAIR(1));
-	mvwaddch(my_menu_win, 2, 0, ACS_LTEE);
-	mvwhline(my_menu_win, 2, 1, ACS_HLINE, 38);
-	mvwaddch(my_menu_win, 2, 39, ACS_RTEE);
-
-	/* Post the menu */
-	post_menu(my_menu);
-	wrefresh(my_menu_win);
-
-	attron(COLOR_PAIR(2));
-	mvprintw(LINES - 2, 0, "Use PageUp and PageDown to scoll down or up a page of items");
-	mvprintw(LINES - 1, 0, "Arrow Keys to navigate (CTRL_Q to Exit)");
-	attroff(COLOR_PAIR(2));
-	refresh();
-
-	while(break_while !=true && (c = wgetch(my_menu_win)) != CTRL_Q)
-	{       switch(c)
-	{
-	case KEY_DOWN:
-		menu_driver(my_menu, REQ_DOWN_ITEM);
-		break;
-	case KEY_UP:
-		menu_driver(my_menu, REQ_UP_ITEM);
-		break;
-	case KEY_NPAGE:
-		menu_driver(my_menu, REQ_SCR_DPAGE);
-		break;
-	case KEY_PPAGE:
-		menu_driver(my_menu, REQ_SCR_UPAGE);
-		break;
-	case '\n':
-		printf("user entered enter\n");
-		break_while = true;
-		break;
+	char *line = history.showHistory();
+	if (line) {
+		this->line = line;
+		restartEdit(win);
 	}
-	wrefresh(my_menu_win);
-	}
-	printf("exit from while\n");
-	/* Unpost and free all the memory taken up */
-	unpost_menu(my_menu);
-	free_menu(my_menu);
-	for(i = 0; i < n_choices; ++i)
-		free_item(my_items[i]);
-	endwin();
-	return " ";
+	// TODO: CHECK THIS CAREFULLY
+	delete line;
 }
 
-void CommandLine::drawmenu(WINDOW *win, int starty, int startx, int width, std::string str, chtype color)
-{
-	int length, x, y;
-	float temp;
-	if(win == NULL)
-		win = stdscr;
-	getyx(win, y, x);
-	if(startx != 0)
-		x = startx;
-	if(starty != 0)
-		y = starty;
-	if(width == 0)
-		width = 80;
-	length = str.length();
-	temp = (width - length)/ 2;
-	x = startx + (int)temp;
-	wattron(win, color);
-	mvwprintw(win,y, x,"%s",str.c_str());
-	wattroff(win, color);
-	refresh();
-}
 
 WINDOW *CommandLine::initWindow() {
 	WINDOW *ret;
