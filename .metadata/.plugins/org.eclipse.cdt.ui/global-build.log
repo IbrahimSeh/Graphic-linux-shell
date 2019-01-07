@@ -8804,3 +8804,2827 @@ make: Nothing to be done for `all'.
 14:11:06 **** Incremental Build of configuration Debug for project GShell ****
 make all 
 make: Nothing to be done for `all'.
+14:52:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:59:42 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:00:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:01:13 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:02:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:02:08 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:03:28 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:03:53 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:04:20 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:04:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:05:35 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:08:19 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:08:58 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:10:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:10:43 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:11:14 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:11:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:12:23 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:13:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:34:19 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:43:08 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:46:11 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:46:21 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:47:28 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:47:41 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:50:58 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:51:14 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+09:07:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:08:26 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:09:00 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::printHistory() [with HistoryItem = CommandLine]’:
+../src/History.cpp:185:3: warning: ‘i’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   printf("i=%d, line= %s\n",i,p->item->getTheString().c_str());
+   ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:12:43 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:12:57 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:14:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:15:01 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:18:10 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:19:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+09:21:27 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+17:43:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+17:47:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+17:48:09 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+17:49:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+17:57:00 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+17:57:19 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+18:00:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:03:16 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:04:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:06:58 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:07:14 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+18:08:23 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:10:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:243:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:12:23 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:243:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:12:57 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:13:48 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:15:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:16:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+18:16:26 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:20:40 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:21:15 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:21:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:22:41 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::endMenu()’:
+../src/History.cpp:160:20: error: too many arguments to function ‘int endwin()’
+  endwin(my_menu_win);
+                    ^
+In file included from ../src/CommandLine.h:12:0,
+                 from ../src/CommandLine.cpp:11:
+/usr/include/curses.h:611:28: note: declared here
+ extern NCURSES_EXPORT(int) endwin (void);    /* implemented */
+                            ^
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::endMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:142:12:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:160:20: error: too many arguments to function ‘int endwin()’
+  endwin(my_menu_win);
+                    ^
+In file included from ../src/CommandLine.h:12:0,
+                 from ../src/CommandLine.cpp:11:
+/usr/include/curses.h:611:28: note: declared here
+ extern NCURSES_EXPORT(int) endwin (void);    /* implemented */
+                            ^
+make: *** [src/CommandLine.o] Error 1
+18:23:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:24:13 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘void History<HistoryItem>::initMenu() [with HistoryItem = CommandLine]’:
+../src/History.cpp:122:11:   required from ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’
+../src/CommandLine.cpp:244:35:   required from here
+../src/History.cpp:87:6: warning: unused variable ‘j’ [-Wunused-variable]
+  int j,i=0;
+      ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:24:42 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:26:02 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:27:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+18:31:34 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp:179:6: error: prototype for ‘void History<HistoryItem>::mouseClick()’ does not match any in class ‘History<HistoryItem>’
+ void History<HistoryItem>::mouseClick()
+      ^
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.h:44:7: error: candidate is: void History<HistoryItem>::mouseClick(WINDOW*)
+  void mouseClick(WINDOW *win);
+       ^
+make: *** [src/CommandLine.o] Error 1
+18:31:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::mouseClick(WINDOW*)’:
+../src/History.cpp:184:22: error: ‘WIN_TOP’ was not declared in this scope
+  if (mouseEvent.y != WIN_TOP + 1) return;
+                      ^
+../src/History.cpp:185:22: error: ‘EDIT_START_POSITION’ was not declared in this scope
+  if (mouseEvent.x >= EDIT_START_POSITION &&
+                      ^
+../src/History.cpp:186:20: error: ‘commandLength’ was not declared in this scope
+    mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+                    ^
+../src/History.cpp:187:28: error: ‘WIN_TOP’ was not declared in this scope
+   wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+                            ^
+../src/History.cpp:187:50: error: ‘WIN_LEFT’ was not declared in this scope
+   wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+                                                  ^
+make: *** [src/CommandLine.o] Error 1
+18:32:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::mouseClick(WINDOW*)’:
+../src/History.cpp:185:22: error: ‘EDIT_START_POSITION’ was not declared in this scope
+  if (mouseEvent.x >= EDIT_START_POSITION &&
+                      ^
+../src/History.cpp:186:20: error: ‘commandLength’ was not declared in this scope
+    mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+                    ^
+../src/History.cpp:187:28: error: ‘WIN_TOP’ was not declared in this scope
+   wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+                            ^
+../src/History.cpp:187:50: error: ‘WIN_LEFT’ was not declared in this scope
+   wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+                                                  ^
+make: *** [src/CommandLine.o] Error 1
+18:34:29 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::mouseClick(WINDOW*)’:
+../src/History.cpp:187:20: error: ‘commandLength’ was not declared in this scope
+    mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+                    ^
+../src/History.cpp:187:36: error: ‘EDIT_START_POSITION’ was not declared in this scope
+    mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+                                    ^
+../src/History.cpp:188:28: error: ‘WIN_TOP’ was not declared in this scope
+   wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+                            ^
+../src/History.cpp:188:50: error: ‘WIN_LEFT’ was not declared in this scope
+   wmove(win,mouseEvent.y - WIN_TOP, mouseEvent.x-WIN_LEFT);
+                                                  ^
+make: *** [src/CommandLine.o] Error 1
+18:34:51 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::mouseClick(WINDOW*)’:
+../src/History.cpp:187:20: error: ‘commandLength’ was not declared in this scope
+    mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+                    ^
+../src/History.cpp:187:36: error: ‘EDIT_START_POSITION’ was not declared in this scope
+    mouseEvent.x <= commandLength + EDIT_START_POSITION) {
+                                    ^
+make: *** [src/CommandLine.o] Error 1
+18:35:10 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::mouseClick(WINDOW*)’:
+../src/History.cpp:187:20: error: ‘commandLength’ was not declared in this scope
+    mouseEvent.x <= commandLength + HEDIT_START_POSITION) {
+                    ^
+make: *** [src/CommandLine.o] Error 1
+19:09:21 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+19:19:26 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+19:44:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+19:48:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+19:50:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+19:50:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+12:59:14 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:04:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:04:30 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:05:44 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:06:16 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:07:26 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:07:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::initMenu()’:
+../src/History.cpp:114:58: error: expected ‘)’ before string constant
+  mvwprintw(my_menu_win, HWIN_HEIGHT - 1, HWIN_WIDTH - 15 "(CTRL_D to Exit)");
+                                                          ^
+../src/History.cpp:114:76: error: too few arguments to function ‘int mvwprintw(WINDOW*, int, int, const char*, ...)’
+  mvwprintw(my_menu_win, HWIN_HEIGHT - 1, HWIN_WIDTH - 15 "(CTRL_D to Exit)");
+                                                                            ^
+In file included from ../src/CommandLine.h:12:0,
+                 from ../src/CommandLine.cpp:11:
+/usr/include/curses.h:699:28: note: declared here
+ extern NCURSES_EXPORT(int) mvwprintw (WINDOW*,int,int, const char *,...) /* implemented */
+                            ^
+make: *** [src/CommandLine.o] Error 1
+13:08:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:08:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:12:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:12:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+13:14:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:15:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:17:23 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:18:07 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:18:40 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:20:20 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/CommandLine.h:12:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘void History<HistoryItem>::initMenu()’:
+../src/History.cpp:115:25: error: ‘WIN_HEIGHT’ was not declared in this scope
+  mvwaddstr(my_menu_win, WIN_HEIGHT-1, WIN_WIDTH - 20, "(CTRL_D to Exit)");
+                         ^
+make: *** [src/CommandLine.o] Error 1
+13:20:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:24:08 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘char* History<HistoryItem>::showHistory()’:
+../src/History.cpp:146:4: error: expected ‘;’ before ‘endMenu’
+    endMenu();
+    ^
+make: *** [src/CommandLine.o] Error 1
+13:24:17 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:24:46 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:25:14 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:26:02 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:27:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:28:18 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:28:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:29:07 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:30:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:30:45 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:31:06 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:31:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:31:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:32:29 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:33:05 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:34:32 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:37:13 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:39:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:52:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:52:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:54:10 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:55:01 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:00:13 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:01:09 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:01:53 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:02:54 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:03:41 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:04:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:06:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:245:9: error: could not convert ‘str’ from ‘std::string {aka std::basic_string<char>}’ to ‘bool’
+  if (str) {
+         ^
+make: *** [src/CommandLine.o] Error 1
+14:06:52 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:06:58 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+14:07:15 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:09:00 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:12:28 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:146:11: error: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘char*’ in return
+    return s;
+           ^
+make: *** [src/CommandLine.o] Error 1
+14:12:33 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In instantiation of ‘char* History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:242:35:   required from here
+../src/History.cpp:146:19: error: invalid conversion from ‘const char*’ to ‘char*’ [-fpermissive]
+    return s.c_str();
+                   ^
+make: *** [src/CommandLine.o] Error 1
+14:14:34 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp:117:8: error: prototype for ‘std::string History<HistoryItem>::showHistory()’ does not match any in class ‘History<HistoryItem>’
+ string History<HistoryItem>::showHistory()
+        ^
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.h:24:8: error: candidate is: char* History<HistoryItem>::showHistory()
+  char *showHistory();
+        ^
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp:167:7: error: prototype for ‘char* History<HistoryItem>::removeSpaces(char*)’ does not match any in class ‘History<HistoryItem>’
+ char *History<HistoryItem>::removeSpaces(char *str)
+       ^
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.h:43:14: error: candidate is: std::string History<HistoryItem>::removeSpaces(char*)
+  std::string removeSpaces(char *str);
+              ^
+make: *** [src/CommandLine.o] Error 1
+14:15:06 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp:117:8: error: prototype for ‘std::string History<HistoryItem>::showHistory()’ does not match any in class ‘History<HistoryItem>’
+ string History<HistoryItem>::showHistory()
+        ^
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.h:24:8: error: candidate is: char* History<HistoryItem>::showHistory()
+  char *showHistory();
+        ^
+In file included from ../src/History.h:48:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp:167:7: error: prototype for ‘char* History<HistoryItem>::removeSpaces(char*)’ does not match any in class ‘History<HistoryItem>’
+ char *History<HistoryItem>::removeSpaces(char *str)
+       ^
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.h:43:14: error: candidate is: std::string History<HistoryItem>::removeSpaces(char*)
+  std::string removeSpaces(char *str);
+              ^
+make: *** [src/CommandLine.o] Error 1
+14:15:32 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:242:35: error: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘char*’ in initialization
+  char *line = history.showHistory();
+                                   ^
+make: *** [src/CommandLine.o] Error 1
+14:15:35 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:242:35: error: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘char*’ in initialization
+  char *line = history.showHistory();
+                                   ^
+make: *** [src/CommandLine.o] Error 1
+14:16:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:244:10: error: could not convert ‘line’ from ‘std::string {aka std::basic_string<char>}’ to ‘bool’
+  if (line) {
+          ^
+../src/CommandLine.cpp:249:9: error: type ‘std::string {aka class std::basic_string<char>}’ argument given to ‘delete’, expected pointer
+  delete line;
+         ^
+make: *** [src/CommandLine.o] Error 1
+14:16:16 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:9: error: type ‘std::string {aka class std::basic_string<char>}’ argument given to ‘delete’, expected pointer
+  delete line;
+         ^
+make: *** [src/CommandLine.o] Error 1
+14:16:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:16:45 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:17:58 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:19:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:19:48 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+14:38:53 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:39:48 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:41:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:44:19 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:44:31 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:45:32 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+14:47:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:50:46 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:52:57 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:58:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/CommandLine.h:12:0,
+                 from ../src/CommandLine.cpp:11:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:142:4: error: expected primary-expression before ‘)’ token
+    mvwinstr(my_menu_win,,,ret);
+    ^
+../src/History.cpp:142:4: error: expected primary-expression before ‘)’ token
+    mvwinstr(my_menu_win,,,ret);
+    ^
+make: *** [src/CommandLine.o] Error 1
+15:02:54 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:03:06 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:04:18 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:06:29 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:09:10 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:10:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:11:51 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:12:42 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:14:22 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:14:31 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:16:10 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:17:12 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:17:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:18:02 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:18:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:19:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+15:20:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:30:01 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:30:26 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:36:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:37:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:37:54 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:39:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:40:15 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+15:40:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 

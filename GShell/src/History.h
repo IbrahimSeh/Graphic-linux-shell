@@ -21,7 +21,7 @@ public:
 	HistoryItem *down();
 	int getCount() {return count;}
 	int getSize() {return size;}
-	char *showHistory();
+	std::string showHistory();
 	virtual ~History();
 private:
 	struct element {
@@ -40,6 +40,8 @@ private:
 	void unpostAndFree(MENU *my_menu, ITEM **my_items);
 	void initMenu();
 	void endMenu();
+	int mouseClick(WINDOW *win);
+
 };
 
 #include "History.cpp"

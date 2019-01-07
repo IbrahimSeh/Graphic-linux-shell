@@ -10,8 +10,10 @@
 
 #define HWIN_LEFT 0
 #define HWIN_TOP 0
-#define HWIN_HEIGHT 20
+#define HWIN_HEIGHT 25
 #define HWIN_WIDTH 80
+#define HEDIT_START_POSITION 1
+#define LINE_FEED 10
 #define CTRL_D 4
 
 using namespace std;
@@ -59,7 +61,6 @@ void History<HistoryItem>::goPastEnd()
 	current=NULL;
 }
 
-
 template <class HistoryItem>
 HistoryItem *History<HistoryItem>::up()
 {
@@ -82,58 +83,50 @@ template <class HistoryItem>
 void History<HistoryItem>::initMenu() {
 
 	/* Create items */
-	my_items = new ITEM * [count];
+	my_items = new ITEM * [count+1];
 	struct element *p=first;
 	int i=0;
-	while(p) {
+	while(p){
 		my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
 		p = p->next;
 	}
 
-	/* Create menu */
+	/* Create menu*/
 	my_menu = new_menu(my_items);
 
 	/* Create the window to be associated with the menu */
-	my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, HWIN_LEFT);
+	my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
 	keypad(my_menu_win, TRUE);
 
 	/* Set main window and sub window */
 	set_menu_win(my_menu, my_menu_win);
-	set_menu_sub(my_menu, NULL);
-	set_menu_format(my_menu, 5, 1);
+	set_menu_sub(my_menu,NULL);
+	set_menu_format(my_menu, HWIN_HEIGHT, 1);
 
 	/* Set menu mark to the string " * " */
 	set_menu_mark(my_menu, "");
-
-	/* Print a border around the main window and print a title */
-	//box(my_menu_win, 0, 0);
-	//mvwaddch(my_menu_win, 2, 0, ACS_LTEE);
-	//mvwhline(my_menu_win, 2, 1, ACS_HLINE, 38);
-	//mvwaddch(my_menu_win, 2, 39, ACS_RTEE);
-
 	/* Post the menu */
 	post_menu(my_menu);
 	wrefresh(my_menu_win);
-
-	attron(COLOR_PAIR(2));
-	mvwprintw(my_menu_win, HWIN_HEIGHT - 1, HWIN_WIDTH - 15, "(CTRL_D to Exit)");
-	attroff(COLOR_PAIR(2));
+	mvwaddstr(my_menu_win, HWIN_HEIGHT-2, HWIN_WIDTH - 25, "(CTRL_D to Exit)");
 	refresh();
 }
 
 template <class HistoryItem>
-char * History<HistoryItem>::showHistory()
+string History<HistoryItem>::showHistory()
 {
 	initMenu();
-
-	int c;
+	wmove(my_menu_win, 0, 0);//set cursor position to top  of window
+	int c,upDownCount = 0;
 	while((c = wgetch(my_menu_win)) != CTRL_D) {
 		switch(c) {
 		case KEY_DOWN:
 			menu_driver(my_menu, REQ_DOWN_ITEM);
+			if(upDownCount < count) upDownCount++;
 			break;
 		case KEY_UP:
 			menu_driver(my_menu, REQ_UP_ITEM);
+			if(upDownCount > 0) upDownCount--;
 			break;
 		case KEY_NPAGE:
 			menu_driver(my_menu, REQ_SCR_DPAGE);
@@ -141,11 +134,17 @@ char * History<HistoryItem>::showHistory()
 		case KEY_PPAGE:
 			menu_driver(my_menu, REQ_SCR_UPAGE);
 			break;
-		case'\n':
-			char *ret = new char[WIN_WIDTH+1];
+		case KEY_MOUSE:
+			upDownCount = mouseClick(my_menu_win);
+			break;
+		case LINE_FEED:
+			char *ret = new char[WIN_WIDTH +1];
 			winstr(my_menu_win,ret);
+			//mvwinstr(my_menu_win, upDownCount, HWIN_WIDTH,ret);
 			endMenu();
-			return ret;
+			string retLine(ret);
+			retLine.erase(retLine.find_last_not_of(" \n\r\t")+1);
+			return retLine;
 		}
 		wrefresh(my_menu_win);
 	}
@@ -163,4 +162,13 @@ void History<HistoryItem>::endMenu() {
 	delete my_items;
 	delwin(my_menu_win);
 	refresh();
+}
+
+template <class HistoryItem>
+int History<HistoryItem>::mouseClick(WINDOW *win)
+{
+	MEVENT mouseEvent;
+	getmouse(&mouseEvent);
+	wmove(win,mouseEvent.y, mouseEvent.x);
+ return mouseEvent.y;
 }
