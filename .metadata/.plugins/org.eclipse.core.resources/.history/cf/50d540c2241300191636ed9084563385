@@ -119,7 +119,6 @@ string History<HistoryItem>::showHistory()
 
 	initMenu();
 	wmove(my_menu_win, 0, 0);//set cursor position to top  of window
-
 	int c, cursorPosition = 0;
 	while((c = wgetch(my_menu_win)) != CTRL_D) {
 		switch(c) {

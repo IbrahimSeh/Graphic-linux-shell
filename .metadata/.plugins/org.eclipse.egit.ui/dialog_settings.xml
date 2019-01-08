@@ -11,14 +11,14 @@
 		<item value="650" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="427" key="DIALOG_HEIGHT"/>
-		<item value="635" key="DIALOG_X_ORIGIN"/>
+		<item value="374" key="DIALOG_X_ORIGIN"/>
 		<item value="225" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">
 		<item value="626" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="621" key="DIALOG_HEIGHT"/>
-		<item value="647" key="DIALOG_X_ORIGIN"/>
+		<item value="398" key="DIALOG_X_ORIGIN"/>
 		<item value="95" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="GitCommitMessageComponent">

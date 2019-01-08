@@ -115,11 +115,8 @@ void History<HistoryItem>::initMenu() {
 template <class HistoryItem>
 string History<HistoryItem>::showHistory()
 {
-	if(count == 0) return "";//Nothing to display
-
 	initMenu();
 	wmove(my_menu_win, 0, 0);//set cursor position to top  of window
-
 	int c, cursorPosition = 0;
 	while((c = wgetch(my_menu_win)) != CTRL_D) {
 		switch(c) {
@@ -150,7 +147,7 @@ string History<HistoryItem>::showHistory()
 		wrefresh(my_menu_win);
 	}
 	endMenu();
-	return "";
+	return NULL;
 }
 
 template <class HistoryItem>

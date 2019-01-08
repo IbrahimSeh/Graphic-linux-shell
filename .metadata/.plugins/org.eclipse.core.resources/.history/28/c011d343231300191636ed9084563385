@@ -115,19 +115,18 @@ void History<HistoryItem>::initMenu() {
 template <class HistoryItem>
 string History<HistoryItem>::showHistory()
 {
-	if(count == 0) return "";//Nothing to display
-
 	initMenu();
 	wmove(my_menu_win, 0, 0);//set cursor position to top  of window
-
-	int c, cursorPosition = 0;
+	int c,upDownCount = 0;
 	while((c = wgetch(my_menu_win)) != CTRL_D) {
 		switch(c) {
 		case KEY_DOWN:
 			menu_driver(my_menu, REQ_DOWN_ITEM);
+			if(upDownCount < count) upDownCount++;
 			break;
 		case KEY_UP:
 			menu_driver(my_menu, REQ_UP_ITEM);
+			if(upDownCount > 0) upDownCount--;
 			break;
 		case KEY_NPAGE:
 			menu_driver(my_menu, REQ_SCR_DPAGE);
@@ -136,8 +135,8 @@ string History<HistoryItem>::showHistory()
 			menu_driver(my_menu, REQ_SCR_UPAGE);
 			break;
 		case KEY_MOUSE:
-			cursorPosition = mouseClick(my_menu_win);
-			wmove(my_menu_win, cursorPosition, 0);
+			upDownCount = mouseClick(my_menu_win);
+			//wmove(my_menu_win, upDownCount, 0);
 			break;
 		case LINE_FEED:
 			char *ret = new char[WIN_WIDTH +1];
@@ -150,7 +149,7 @@ string History<HistoryItem>::showHistory()
 		wrefresh(my_menu_win);
 	}
 	endMenu();
-	return "";
+	return NULL;
 }
 
 template <class HistoryItem>
