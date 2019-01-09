@@ -8,6 +8,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
 #include "CommandLine.h"
 
 #define WIN_LEFT 0
@@ -17,8 +19,9 @@
 #define EDIT_START_POSITION 1
 #define EDIT_END_POSITION WIN_WIDTH - 2
 #define MAX_COMMAND_LENGTH EDIT_END_POSITION - EDIT_START_POSITION + 1
-#define CTRL_A 1
 #define HISTORY_DEFAULT_SIZE 100
+#define CTRL_A 1
+#define TAB 9
 using namespace std;
 
 bool CommandLine::insertMode;
@@ -114,6 +117,11 @@ int CommandLine::edit() {
 			case CTRL_A:
 				showHistory(win);
 				break;
+			case TAB:
+				printf("this is tab\n");
+				updateLineFromWindow(win);
+				endwin();
+				return -1;
 			default:
 				updateLineFromWindow(win);
 				endwin();
@@ -125,7 +133,6 @@ int CommandLine::edit() {
 		}
 	}
 }
-
 
 void CommandLine::send(int fd) {
 	const char LF = '\n';
@@ -244,9 +251,7 @@ void  CommandLine::showHistory(WINDOW *win)
 		this->line = line;
 		this->commandLength = line.length();
 		restartEdit(win);
-	}
-	// TODO: CHECK THIS CAREFULLY
-	//delete line;
+	}else restartEdit(win);
 }
 
 

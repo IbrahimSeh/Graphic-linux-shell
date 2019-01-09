@@ -28,6 +28,7 @@ public:
 	void setTheString(std::string str);
 	int edit();
 	void send(int fd);
+	void tabsend(int fd);
 	void do_backspace(WINDOW* win);
 
 	static void init();

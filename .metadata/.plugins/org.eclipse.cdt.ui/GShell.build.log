@@ -1,20 +1,6 @@
-11:07:07 **** Incremental Build of configuration Debug for project GShell ****
+13:00:55 **** Incremental Build of configuration Debug for project GShell ****
 make all 
-Building file: ../src/CommandLine.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
-Finished building: ../src/CommandLine.cpp
- 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-Finished building: ../src/main.cpp
- 
-Building target: GShell
-Invoking: GCC C++ Linker
-g++  -o "GShell"  ./src/CommandLine.o ./src/main.o   -lncurses -lmenu
-Finished building target: GShell
- 
+make: Nothing to be done for `all'.
 
-11:07:07 Build Finished (took 626ms)
+13:00:55 Build Finished (took 71ms)
 

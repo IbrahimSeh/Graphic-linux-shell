@@ -145,7 +145,8 @@ int main () {
 		    command = new CommandLine();
 		}
 		terminator = command->edit();
-		if (terminator != 4) {
+
+		if (terminator != 4 ) {
 			command->send(mfd);
 		}
 	} while(terminator != 4);

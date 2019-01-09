@@ -116,10 +116,10 @@ template <class HistoryItem>
 string History<HistoryItem>::showHistory()
 {
 	if(count == 0) return "";//Nothing to display
-
+	MEVENT mouseEvent;
 	initMenu();
 	wmove(my_menu_win, 0, 0);//set cursor position to top  of window
-
+	char *ret = new char[WIN_WIDTH +1];
 	int c, cursorPosition = 0;
 	while((c = wgetch(my_menu_win)) != CTRL_D) {
 		switch(c) {
@@ -136,19 +136,30 @@ string History<HistoryItem>::showHistory()
 			menu_driver(my_menu, REQ_SCR_UPAGE);
 			break;
 		case KEY_MOUSE:
-			cursorPosition = mouseClick(my_menu_win);
+			cursorPosition = mouseClick(my_menu_win, &mouseEvent);
 			wmove(my_menu_win, cursorPosition, 0);
+			if(mouseEvent.bstate & BUTTON1_DOUBLE_CLICKED)
+			{
+				winstr(my_menu_win,ret);
+				endMenu();
+				string retLine(ret);
+				retLine.erase(retLine.find_last_not_of(" \n\r\t")+1);
+				delete ret;
+				return retLine;
+			}
 			break;
 		case LINE_FEED:
-			char *ret = new char[WIN_WIDTH +1];
 			winstr(my_menu_win,ret);
 			endMenu();
 			string retLine(ret);
 			retLine.erase(retLine.find_last_not_of(" \n\r\t")+1);
+			delete ret;
 			return retLine;
+			break;
 		}
 		wrefresh(my_menu_win);
 	}
+	delete ret;
 	endMenu();
 	return "";
 }
@@ -162,14 +173,14 @@ void History<HistoryItem>::endMenu() {
 		free_item(my_items[i]);
 	delete my_items;
 	delwin(my_menu_win);
+	clear();
 	refresh();
 }
 
 template <class HistoryItem>
-int History<HistoryItem>::mouseClick(WINDOW *win)
+int History<HistoryItem>::mouseClick(WINDOW *win, MEVENT *mouseEvent)
 {
-	MEVENT mouseEvent;
-	getmouse(&mouseEvent);
-	wmove(win,mouseEvent.y, mouseEvent.x);
-    return mouseEvent.y < count +1 ? mouseEvent.y : 0;
+	getmouse(mouseEvent);
+	wmove(win,mouseEvent->y, mouseEvent->x);
+	return mouseEvent->y < count +1 ? mouseEvent->y : 0;
 }

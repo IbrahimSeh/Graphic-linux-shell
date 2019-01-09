@@ -40,7 +40,7 @@ private:
 	void unpostAndFree(MENU *my_menu, ITEM **my_items);
 	void initMenu();
 	void endMenu();
-	int mouseClick(WINDOW *win);
+	int mouseClick(WINDOW *win, MEVENT *mouseEvent);
 
 };
 
