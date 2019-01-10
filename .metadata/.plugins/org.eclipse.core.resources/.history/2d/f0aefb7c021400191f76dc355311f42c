@@ -1,0 +1,125 @@
+#include "Menu.h"
+#define MWIN_LEFT 0
+#define MWIN_TOP 0
+#define MWIN_HEIGHT 25
+#define MWIN_WIDTH 80
+#define HEDIT_START_POSITION 1
+#define LINE_FEED 10
+#define CTRL_D 4
+using namespace std;
+
+Menu::Menu(int count, string *stringArray) {
+	this->count = count;
+	my_items = new ITEM * [count+1];
+	initItems(stringArray);
+	my_menu = new_menu(my_items);
+}
+
+void initItems(string *stringArray)
+{
+	int i;
+	for(i=0;i<this->count;i++){
+			my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+			p = p->next;
+		}
+}
+void Menu::initMenu(int count) {
+
+	struct element *p=first;
+	int i=0;
+	while(p){
+		my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+		p = p->next;
+	}
+
+	/* Create menu*/
+
+
+	/* Create the window to be associated with the menu */
+	my_menu_win = newwin(MWIN_HEIGHT, MWIN_WIDTH, MWIN_TOP, 0);
+	keypad(my_menu_win, TRUE);
+
+	/* Set main window and sub window */
+	set_menu_win(my_menu, my_menu_win);
+	set_menu_sub(my_menu,NULL);
+	set_menu_format(my_menu, MWIN_HEIGHT -1, 1);
+
+	/* Set menu mark to the string "Nothing" */
+	set_menu_mark(my_menu, "");
+	/* Post the menu */
+	post_menu(my_menu);
+	wrefresh(my_menu_win);
+	mvwaddstr(my_menu_win, MWIN_HEIGHT-2, MWIN_WIDTH - 25, "(CTRL_D to Exit)");
+	refresh();
+}
+
+string Menu::showMenu()
+{
+	if(count == 0) return "";//Nothing to display
+	MEVENT mouseEvent;
+	initMenu();
+	wmove(my_menu_win, 0, 0);//set cursor position to top  of window
+	char *ret = new char[MWIN_WIDTH +1];
+	int c, cursorPosition = 0;
+	while((c = wgetch(my_menu_win)) != CTRL_D) {
+		switch(c) {
+		case KEY_DOWN:
+			menu_driver(my_menu, REQ_DOWN_ITEM);
+			break;
+		case KEY_UP:
+			menu_driver(my_menu, REQ_UP_ITEM);
+			break;
+		case KEY_NPAGE:
+			menu_driver(my_menu, REQ_SCR_DPAGE);
+			break;
+		case KEY_PPAGE:
+			menu_driver(my_menu, REQ_SCR_UPAGE);
+			break;
+		case KEY_MOUSE:
+			cursorPosition = mouseClick(my_menu_win, &mouseEvent);
+			wmove(my_menu_win, cursorPosition, 0);
+			if(mouseEvent.bstate & BUTTON1_DOUBLE_CLICKED)
+			{
+				winstr(my_menu_win,ret);
+				endMenu();
+				string retLine(ret);
+				retLine.erase(retLine.find_last_not_of(" \n\r\t")+1);
+				delete ret;
+				return retLine;
+			}
+			break;
+		case LINE_FEED:
+			winstr(my_menu_win,ret);
+			endMenu();
+			string retLine(ret);
+			retLine.erase(retLine.find_last_not_of(" \n\r\t")+1);
+			delete ret;
+			return retLine;
+			break;
+		}
+		wrefresh(my_menu_win);
+	}
+	delete ret;
+	endMenu();
+	return "";
+}
+
+void Menu::endMenu() {
+	int i;
+	unpost_menu(my_menu);
+	free_menu(my_menu);
+	for(i = 0; i < count; i++)
+		free_item(my_items[i]);
+	delete my_items;
+	delwin(my_menu_win);
+	clear();
+	refresh();
+}
+
+
+int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+{
+	getmouse(mouseEvent);
+	wmove(win,mouseEvent->y, mouseEvent->x);
+	return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+}

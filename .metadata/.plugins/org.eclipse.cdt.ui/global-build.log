@@ -13398,3 +13398,3019 @@ Finished building target: GShell
 13:00:55 **** Incremental Build of configuration Debug for project GShell ****
 make all 
 make: Nothing to be done for `all'.
+13:11:58 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp:2:6: error: ‘Menu’ has not been declared
+ void Menu::initMenu() {
+      ^
+../src/Menu.cpp: In function ‘void initMenu()’:
+../src/Menu.cpp:5:2: error: ‘my_items’ was not declared in this scope
+  my_items = new ITEM * [count+1];
+  ^
+../src/Menu.cpp:5:17: error: expected type-specifier before ‘ITEM’
+  my_items = new ITEM * [count+1];
+                 ^
+../src/Menu.cpp:5:17: error: expected ‘;’ before ‘ITEM’
+../src/Menu.cpp:6:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:9:29: error: invalid use of incomplete type ‘struct initMenu()::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:6:9: error: forward declaration of ‘struct initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:9:60: error: ‘NULL’ was not declared in this scope
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                                                            ^
+../src/Menu.cpp:9:64: error: ‘new_item’ was not declared in this scope
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                                                                ^
+../src/Menu.cpp:10:8: error: invalid use of incomplete type ‘struct initMenu()::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:6:9: error: forward declaration of ‘struct initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:14:2: error: ‘my_menu’ was not declared in this scope
+  my_menu = new_menu(my_items);
+  ^
+../src/Menu.cpp:14:29: error: ‘new_menu’ was not declared in this scope
+  my_menu = new_menu(my_items);
+                             ^
+../src/Menu.cpp:17:2: error: ‘my_menu_win’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+  ^
+../src/Menu.cpp:17:23: error: ‘HWIN_HEIGHT’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                       ^
+../src/Menu.cpp:17:36: error: ‘HWIN_WIDTH’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                    ^
+../src/Menu.cpp:17:48: error: ‘HWIN_TOP’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                ^
+../src/Menu.cpp:17:59: error: ‘newwin’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                           ^
+../src/Menu.cpp:18:22: error: ‘TRUE’ was not declared in this scope
+  keypad(my_menu_win, TRUE);
+                      ^
+../src/Menu.cpp:18:26: error: ‘keypad’ was not declared in this scope
+  keypad(my_menu_win, TRUE);
+                          ^
+../src/Menu.cpp:21:35: error: ‘set_menu_win’ was not declared in this scope
+  set_menu_win(my_menu, my_menu_win);
+                                   ^
+../src/Menu.cpp:22:23: error: ‘NULL’ was not declared in this scope
+  set_menu_sub(my_menu,NULL);
+                       ^
+../src/Menu.cpp:22:27: error: ‘set_menu_sub’ was not declared in this scope
+  set_menu_sub(my_menu,NULL);
+                           ^
+../src/Menu.cpp:23:44: error: ‘set_menu_format’ was not declared in this scope
+  set_menu_format(my_menu, HWIN_HEIGHT -1, 1);
+                                            ^
+../src/Menu.cpp:26:27: error: ‘set_menu_mark’ was not declared in this scope
+  set_menu_mark(my_menu, "");
+                           ^
+../src/Menu.cpp:28:19: error: ‘post_menu’ was not declared in this scope
+  post_menu(my_menu);
+                   ^
+../src/Menu.cpp:29:22: error: ‘wrefresh’ was not declared in this scope
+  wrefresh(my_menu_win);
+                      ^
+../src/Menu.cpp:30:75: error: ‘mvwaddstr’ was not declared in this scope
+  mvwaddstr(my_menu_win, HWIN_HEIGHT-2, HWIN_WIDTH - 25, "(CTRL_D to Exit)");
+                                                                           ^
+../src/Menu.cpp:31:10: error: ‘refresh’ was not declared in this scope
+  refresh();
+          ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:34:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+../src/Menu.cpp:85:6: error: ‘Menu’ has not been declared
+ void Menu::endMenu() {
+      ^
+../src/Menu.cpp: In function ‘void endMenu()’:
+../src/Menu.cpp:87:14: error: ‘my_menu’ was not declared in this scope
+  unpost_menu(my_menu);
+              ^
+../src/Menu.cpp:87:21: error: ‘unpost_menu’ was not declared in this scope
+  unpost_menu(my_menu);
+                     ^
+../src/Menu.cpp:88:19: error: ‘free_menu’ was not declared in this scope
+  free_menu(my_menu);
+                   ^
+../src/Menu.cpp:89:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp:90:13: error: ‘my_items’ was not declared in this scope
+   free_item(my_items[i]);
+             ^
+../src/Menu.cpp:90:24: error: ‘free_item’ was not declared in this scope
+   free_item(my_items[i]);
+                        ^
+../src/Menu.cpp:91:9: error: ‘my_items’ was not declared in this scope
+  delete my_items;
+         ^
+../src/Menu.cpp:92:9: error: ‘my_menu_win’ was not declared in this scope
+  delwin(my_menu_win);
+         ^
+../src/Menu.cpp:92:20: error: ‘delwin’ was not declared in this scope
+  delwin(my_menu_win);
+                    ^
+../src/Menu.cpp:93:8: error: ‘clear’ was not declared in this scope
+  clear();
+        ^
+../src/Menu.cpp:94:10: error: ‘refresh’ was not declared in this scope
+  refresh();
+          ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:98:5: error: ‘Menu’ has not been declared
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+     ^
+../src/Menu.cpp:98:22: error: ‘WINDOW’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                      ^
+../src/Menu.cpp:98:30: error: ‘win’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                              ^
+../src/Menu.cpp:98:35: error: ‘MEVENT’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                   ^
+../src/Menu.cpp:98:43: error: ‘mouseEvent’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                           ^
+../src/Menu.cpp:98:53: error: expression list treated as compound expression in initializer [-fpermissive]
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                                     ^
+../src/Menu.cpp:99:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+ {
+ ^
+make: *** [src/Menu.o] Error 1
+13:13:30 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp:3:6: error: ‘Menu’ has not been declared
+ void Menu::initMenu() {
+      ^
+../src/Menu.cpp: In function ‘void initMenu()’:
+../src/Menu.cpp:6:2: error: ‘my_items’ was not declared in this scope
+  my_items = new ITEM * [count+1];
+  ^
+../src/Menu.cpp:6:17: error: expected type-specifier before ‘ITEM’
+  my_items = new ITEM * [count+1];
+                 ^
+../src/Menu.cpp:6:17: error: expected ‘;’ before ‘ITEM’
+../src/Menu.cpp:7:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:10:29: error: invalid use of incomplete type ‘struct initMenu()::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:7:9: error: forward declaration of ‘struct initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:10:60: error: ‘NULL’ was not declared in this scope
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                                                            ^
+../src/Menu.cpp:10:64: error: ‘new_item’ was not declared in this scope
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                                                                ^
+../src/Menu.cpp:11:8: error: invalid use of incomplete type ‘struct initMenu()::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:7:9: error: forward declaration of ‘struct initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:15:2: error: ‘my_menu’ was not declared in this scope
+  my_menu = new_menu(my_items);
+  ^
+../src/Menu.cpp:15:29: error: ‘new_menu’ was not declared in this scope
+  my_menu = new_menu(my_items);
+                             ^
+../src/Menu.cpp:18:2: error: ‘my_menu_win’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+  ^
+../src/Menu.cpp:18:23: error: ‘HWIN_HEIGHT’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                       ^
+../src/Menu.cpp:18:36: error: ‘HWIN_WIDTH’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                    ^
+../src/Menu.cpp:18:48: error: ‘HWIN_TOP’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                ^
+../src/Menu.cpp:18:59: error: ‘newwin’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                           ^
+../src/Menu.cpp:19:22: error: ‘TRUE’ was not declared in this scope
+  keypad(my_menu_win, TRUE);
+                      ^
+../src/Menu.cpp:19:26: error: ‘keypad’ was not declared in this scope
+  keypad(my_menu_win, TRUE);
+                          ^
+../src/Menu.cpp:22:35: error: ‘set_menu_win’ was not declared in this scope
+  set_menu_win(my_menu, my_menu_win);
+                                   ^
+../src/Menu.cpp:23:23: error: ‘NULL’ was not declared in this scope
+  set_menu_sub(my_menu,NULL);
+                       ^
+../src/Menu.cpp:23:27: error: ‘set_menu_sub’ was not declared in this scope
+  set_menu_sub(my_menu,NULL);
+                           ^
+../src/Menu.cpp:24:44: error: ‘set_menu_format’ was not declared in this scope
+  set_menu_format(my_menu, HWIN_HEIGHT -1, 1);
+                                            ^
+../src/Menu.cpp:27:27: error: ‘set_menu_mark’ was not declared in this scope
+  set_menu_mark(my_menu, "");
+                           ^
+../src/Menu.cpp:29:19: error: ‘post_menu’ was not declared in this scope
+  post_menu(my_menu);
+                   ^
+../src/Menu.cpp:30:22: error: ‘wrefresh’ was not declared in this scope
+  wrefresh(my_menu_win);
+                      ^
+../src/Menu.cpp:31:75: error: ‘mvwaddstr’ was not declared in this scope
+  mvwaddstr(my_menu_win, HWIN_HEIGHT-2, HWIN_WIDTH - 25, "(CTRL_D to Exit)");
+                                                                           ^
+../src/Menu.cpp:32:10: error: ‘refresh’ was not declared in this scope
+  refresh();
+          ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:35:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+../src/Menu.cpp:86:6: error: ‘Menu’ has not been declared
+ void Menu::endMenu() {
+      ^
+../src/Menu.cpp: In function ‘void endMenu()’:
+../src/Menu.cpp:88:14: error: ‘my_menu’ was not declared in this scope
+  unpost_menu(my_menu);
+              ^
+../src/Menu.cpp:88:21: error: ‘unpost_menu’ was not declared in this scope
+  unpost_menu(my_menu);
+                     ^
+../src/Menu.cpp:89:19: error: ‘free_menu’ was not declared in this scope
+  free_menu(my_menu);
+                   ^
+../src/Menu.cpp:90:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp:91:13: error: ‘my_items’ was not declared in this scope
+   free_item(my_items[i]);
+             ^
+../src/Menu.cpp:91:24: error: ‘free_item’ was not declared in this scope
+   free_item(my_items[i]);
+                        ^
+../src/Menu.cpp:92:9: error: ‘my_items’ was not declared in this scope
+  delete my_items;
+         ^
+../src/Menu.cpp:93:9: error: ‘my_menu_win’ was not declared in this scope
+  delwin(my_menu_win);
+         ^
+../src/Menu.cpp:93:20: error: ‘delwin’ was not declared in this scope
+  delwin(my_menu_win);
+                    ^
+../src/Menu.cpp:94:8: error: ‘clear’ was not declared in this scope
+  clear();
+        ^
+../src/Menu.cpp:95:10: error: ‘refresh’ was not declared in this scope
+  refresh();
+          ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:99:5: error: ‘Menu’ has not been declared
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+     ^
+../src/Menu.cpp:99:22: error: ‘WINDOW’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                      ^
+../src/Menu.cpp:99:30: error: ‘win’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                              ^
+../src/Menu.cpp:99:35: error: ‘MEVENT’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                   ^
+../src/Menu.cpp:99:43: error: ‘mouseEvent’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                           ^
+../src/Menu.cpp:99:53: error: expression list treated as compound expression in initializer [-fpermissive]
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                                     ^
+../src/Menu.cpp:100:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+ {
+ ^
+make: *** [src/Menu.o] Error 1
+13:13:45 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp:3:6: error: ‘Menu’ has not been declared
+ void Menu::initMenu() {
+      ^
+../src/Menu.cpp: In function ‘void initMenu()’:
+../src/Menu.cpp:6:2: error: ‘my_items’ was not declared in this scope
+  my_items = new ITEM * [count+1];
+  ^
+../src/Menu.cpp:6:17: error: expected type-specifier before ‘ITEM’
+  my_items = new ITEM * [count+1];
+                 ^
+../src/Menu.cpp:6:17: error: expected ‘;’ before ‘ITEM’
+../src/Menu.cpp:7:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:10:29: error: invalid use of incomplete type ‘struct initMenu()::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:7:9: error: forward declaration of ‘struct initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:10:60: error: ‘NULL’ was not declared in this scope
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                                                            ^
+../src/Menu.cpp:10:64: error: ‘new_item’ was not declared in this scope
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                                                                ^
+../src/Menu.cpp:11:8: error: invalid use of incomplete type ‘struct initMenu()::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:7:9: error: forward declaration of ‘struct initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:15:2: error: ‘my_menu’ was not declared in this scope
+  my_menu = new_menu(my_items);
+  ^
+../src/Menu.cpp:15:29: error: ‘new_menu’ was not declared in this scope
+  my_menu = new_menu(my_items);
+                             ^
+../src/Menu.cpp:18:2: error: ‘my_menu_win’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+  ^
+../src/Menu.cpp:18:23: error: ‘HWIN_HEIGHT’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                       ^
+../src/Menu.cpp:18:36: error: ‘HWIN_WIDTH’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                    ^
+../src/Menu.cpp:18:48: error: ‘HWIN_TOP’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                ^
+../src/Menu.cpp:18:59: error: ‘newwin’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                           ^
+../src/Menu.cpp:19:22: error: ‘TRUE’ was not declared in this scope
+  keypad(my_menu_win, TRUE);
+                      ^
+../src/Menu.cpp:19:26: error: ‘keypad’ was not declared in this scope
+  keypad(my_menu_win, TRUE);
+                          ^
+../src/Menu.cpp:22:35: error: ‘set_menu_win’ was not declared in this scope
+  set_menu_win(my_menu, my_menu_win);
+                                   ^
+../src/Menu.cpp:23:23: error: ‘NULL’ was not declared in this scope
+  set_menu_sub(my_menu,NULL);
+                       ^
+../src/Menu.cpp:23:27: error: ‘set_menu_sub’ was not declared in this scope
+  set_menu_sub(my_menu,NULL);
+                           ^
+../src/Menu.cpp:24:44: error: ‘set_menu_format’ was not declared in this scope
+  set_menu_format(my_menu, HWIN_HEIGHT -1, 1);
+                                            ^
+../src/Menu.cpp:27:27: error: ‘set_menu_mark’ was not declared in this scope
+  set_menu_mark(my_menu, "");
+                           ^
+../src/Menu.cpp:29:19: error: ‘post_menu’ was not declared in this scope
+  post_menu(my_menu);
+                   ^
+../src/Menu.cpp:30:22: error: ‘wrefresh’ was not declared in this scope
+  wrefresh(my_menu_win);
+                      ^
+../src/Menu.cpp:31:75: error: ‘mvwaddstr’ was not declared in this scope
+  mvwaddstr(my_menu_win, HWIN_HEIGHT-2, HWIN_WIDTH - 25, "(CTRL_D to Exit)");
+                                                                           ^
+../src/Menu.cpp:32:10: error: ‘refresh’ was not declared in this scope
+  refresh();
+          ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:35:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+../src/Menu.cpp:86:6: error: ‘Menu’ has not been declared
+ void Menu::endMenu() {
+      ^
+../src/Menu.cpp: In function ‘void endMenu()’:
+../src/Menu.cpp:88:14: error: ‘my_menu’ was not declared in this scope
+  unpost_menu(my_menu);
+              ^
+../src/Menu.cpp:88:21: error: ‘unpost_menu’ was not declared in this scope
+  unpost_menu(my_menu);
+                     ^
+../src/Menu.cpp:89:19: error: ‘free_menu’ was not declared in this scope
+  free_menu(my_menu);
+                   ^
+../src/Menu.cpp:90:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp:91:13: error: ‘my_items’ was not declared in this scope
+   free_item(my_items[i]);
+             ^
+../src/Menu.cpp:91:24: error: ‘free_item’ was not declared in this scope
+   free_item(my_items[i]);
+                        ^
+../src/Menu.cpp:92:9: error: ‘my_items’ was not declared in this scope
+  delete my_items;
+         ^
+../src/Menu.cpp:93:9: error: ‘my_menu_win’ was not declared in this scope
+  delwin(my_menu_win);
+         ^
+../src/Menu.cpp:93:20: error: ‘delwin’ was not declared in this scope
+  delwin(my_menu_win);
+                    ^
+../src/Menu.cpp:94:8: error: ‘clear’ was not declared in this scope
+  clear();
+        ^
+../src/Menu.cpp:95:10: error: ‘refresh’ was not declared in this scope
+  refresh();
+          ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:99:5: error: ‘Menu’ has not been declared
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+     ^
+../src/Menu.cpp:99:22: error: ‘WINDOW’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                      ^
+../src/Menu.cpp:99:30: error: ‘win’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                              ^
+../src/Menu.cpp:99:35: error: ‘MEVENT’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                   ^
+../src/Menu.cpp:99:43: error: ‘mouseEvent’ was not declared in this scope
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                           ^
+../src/Menu.cpp:99:53: error: expression list treated as compound expression in initializer [-fpermissive]
+ int Menu::mouseClick(WINDOW *win, MEVENT *mouseEvent)
+                                                     ^
+../src/Menu.cpp:100:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+ {
+ ^
+make: *** [src/Menu.o] Error 1
+13:14:23 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:24:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu()’:
+../src/Menu.cpp:7:25: error: ‘count’ was not declared in this scope
+  my_items = new ITEM * [count+1];
+                         ^
+../src/Menu.cpp:8:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:11:29: error: invalid use of incomplete type ‘struct Menu::initMenu()::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:8:9: error: forward declaration of ‘struct Menu::initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:12:8: error: invalid use of incomplete type ‘struct Menu::initMenu()::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:8:9: error: forward declaration of ‘struct Menu::initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:23: error: ‘HWIN_HEIGHT’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                       ^
+../src/Menu.cpp:19:36: error: ‘HWIN_WIDTH’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                    ^
+../src/Menu.cpp:19:48: error: ‘HWIN_TOP’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:36:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:91:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:104:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:105:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:17:01 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu()’:
+../src/Menu.cpp:14:25: error: ‘count’ was not declared in this scope
+  my_items = new ITEM * [count+1];
+                         ^
+../src/Menu.cpp:15:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:18:29: error: invalid use of incomplete type ‘struct Menu::initMenu()::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:8: error: invalid use of incomplete type ‘struct Menu::initMenu()::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:26:23: error: ‘HWIN_HEIGHT’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                       ^
+../src/Menu.cpp:26:36: error: ‘HWIN_WIDTH’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                    ^
+../src/Menu.cpp:26:48: error: ‘HWIN_TOP’ was not declared in this scope
+  my_menu_win = newwin(HWIN_HEIGHT, HWIN_WIDTH, HWIN_TOP, 0);
+                                                ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:43:1: error: ‘string’ does not name a type
+ string Menu::showMenu(int count)
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:98:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:111:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:17:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu()’:
+../src/Menu.cpp:14:25: error: ‘count’ was not declared in this scope
+  my_items = new ITEM * [count+1];
+                         ^
+../src/Menu.cpp:15:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:18:29: error: invalid use of incomplete type ‘struct Menu::initMenu()::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:8: error: invalid use of incomplete type ‘struct Menu::initMenu()::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu()::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:43:1: error: ‘string’ does not name a type
+ string Menu::showMenu(int count)
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:98:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:111:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:18:14 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:15:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:18:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:43:1: error: ‘string’ does not name a type
+ string Menu::showMenu(int count)
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:98:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:111:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:19:01 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ does not name a type
+  string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:15:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:18:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:43:1: error: ‘string’ does not name a type
+ string Menu::showMenu(int count)
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:98:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:111:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:19:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:15:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:18:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:43:1: error: ‘string’ does not name a type
+ string Menu::showMenu(int count)
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:98:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:111:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:19:13 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:15:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:18:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:19:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:15:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:43:1: error: ‘string’ does not name a type
+ string Menu::showMenu(int count)
+ ^
+../src/Menu.cpp: In member function ‘void Menu::endMenu()’:
+../src/Menu.cpp:98:17: error: ‘count’ was not declared in this scope
+  for(i = 0; i < count; i++)
+                 ^
+../src/Menu.cpp: In member function ‘int Menu::mouseClick(WINDOW*, MEVENT*)’:
+../src/Menu.cpp:111:25: error: ‘count’ was not declared in this scope
+  return mouseEvent->y < count +1 ? mouseEvent->y : 0;
+                         ^
+../src/Menu.cpp:112:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/Menu.o] Error 1
+13:22:31 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:16:2: error: default argument missing for parameter 2 of ‘Menu::Menu(int, int)’
+  Menu(int size=HISTORY_DEFAULT_SIZE, int count);
+  ^
+../src/Menu.cpp: In constructor ‘Menu::Menu(int, int)’:
+../src/Menu.cpp:12:8: error: ‘class Menu’ has no member named ‘size’
+  this->size = size;
+        ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:23:02 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:19:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:22:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:19:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:23:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:19:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:47:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:23:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:18:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:21:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:18:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:22:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:18:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:46:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:25:41 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:19:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:22:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:19:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:23:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:19:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:47:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:27:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:28:12 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:28:15 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:28:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:28:48 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:28:51 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:11:1: error: prototype for ‘Menu::Menu(int, int*)’ does not match any in class ‘Menu’
+ Menu::Menu(int count, string *stringArray) {
+ ^
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:14:7: error: candidates are: constexpr Menu::Menu(Menu&&)
+ class Menu {
+       ^
+../src/Menu.h:14:7: error:                 constexpr Menu::Menu(const Menu&)
+../src/Menu.h:16:2: error:                 Menu::Menu(int)
+  Menu(int count);
+  ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:29:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:16:18: error: ‘string’ has not been declared
+  Menu(int count, string *stringArray);
+                  ^
+../src/Menu.h:17:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:28:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:29:21 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:18: error: ‘string’ has not been declared
+  Menu(int count, string *stringArray);
+                  ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:30:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:18: error: ‘string’ has not been declared
+  Menu(int count, string *stringArray);
+                  ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:30:52 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:20:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:23:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:24:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:20:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:48:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:33:09 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:16: error: variable or field ‘initItems’ declared void
+ void initItems(string *stringArray)
+                ^
+../src/Menu.cpp:18:16: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:24: error: ‘stringArray’ was not declared in this scope
+ void initItems(string *stringArray)
+                        ^
+../src/Menu.cpp: In member function ‘void Menu::initMenu(int)’:
+../src/Menu.cpp:24:20: error: ‘first’ was not declared in this scope
+  struct element *p=first;
+                    ^
+../src/Menu.cpp:27:29: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+                             ^
+../src/Menu.cpp:24:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp:28:8: error: invalid use of incomplete type ‘struct Menu::initMenu(int)::element’
+   p = p->next;
+        ^
+../src/Menu.cpp:24:9: error: forward declaration of ‘struct Menu::initMenu(int)::element’
+  struct element *p=first;
+         ^
+../src/Menu.cpp: At global scope:
+../src/Menu.cpp:52:1: error: ‘string’ does not name a type
+ string Menu::showMenu()
+ ^
+make: *** [src/Menu.o] Error 1
+13:33:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:16: error: variable or field ‘initItems’ declared void
+ void initItems(string *stringArray)
+                ^
+../src/Menu.cpp:18:16: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:24: error: ‘stringArray’ was not declared in this scope
+ void initItems(string *stringArray)
+                        ^
+make: *** [src/Menu.o] Error 1
+13:34:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:16: error: variable or field ‘initItems’ declared void
+ void initItems(string *stringArray)
+                ^
+../src/Menu.cpp:18:16: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:24: error: ‘stringArray’ was not declared in this scope
+ void initItems(string *stringArray)
+                        ^
+make: *** [src/Menu.o] Error 1
+13:34:22 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:34:52 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:35:17 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:27: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(std::string *stringArray)
+                           ^
+../src/Menu.cpp:18:22: error: ‘string’ is not a member of ‘std’
+ void Menu::initItems(std::string *stringArray)
+                      ^
+../src/Menu.cpp:18:35: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(std::string *stringArray)
+                                   ^
+make: *** [src/Menu.o] Error 1
+13:35:21 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:36:05 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:36:30 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:36:44 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu(int count);
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:37:19 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+make: *** [src/CommandLine.o] Error 1
+13:38:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘int History<HistoryItem>::showHistory()’:
+../src/History.cpp:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+make: *** [src/CommandLine.o] Error 1
+13:42:24 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘int History<HistoryItem>::showHistory()’:
+../src/History.cpp:108:1: error: ‘string’ was not declared in this scope
+ string *stringArray;
+ ^
+../src/History.cpp:108:1: note: suggested alternative:
+In file included from /usr/include/c++/4.8/string:39:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/stringfwd.h:62:33: note:   ‘std::string’
+   typedef basic_string<char>    string;   
+                                 ^
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp:108:9: error: ‘stringArray’ was not declared in this scope
+ string *stringArray;
+         ^
+../src/History.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘int History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:109:6: warning: unused variable ‘m’ [-Wunused-variable]
+ Menu m = new Menu(count, stringArray);
+      ^
+make: *** [src/CommandLine.o] Error 1
+13:42:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘int History<HistoryItem>::showHistory()’:
+../src/History.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘int History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:109:37: error: conversion from ‘Menu*’ to non-scalar type ‘Menu’ requested
+ Menu m = new Menu(count, stringArray);
+                                     ^
+make: *** [src/CommandLine.o] Error 1
+13:43:54 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘int History<HistoryItem>::showHistory()’:
+../src/History.cpp:108:32: error: there are no arguments to ‘getItems’ that depend on a template parameter, so a declaration of ‘getItems’ must be available [-fpermissive]
+ string *stringArray = getItems();
+                                ^
+../src/History.cpp:108:32: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+../src/History.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘int History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:108:32: error: ‘getItems’ was not declared in this scope
+ string *stringArray = getItems();
+                                ^
+../src/History.cpp:109:7: warning: unused variable ‘m’ [-Wunused-variable]
+ Menu *m = new Menu(count, stringArray);
+       ^
+make: *** [src/CommandLine.o] Error 1
+13:44:35 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘int History<HistoryItem>::showHistory()’:
+../src/History.cpp:108:32: error: there are no arguments to ‘getItems’ that depend on a template parameter, so a declaration of ‘getItems’ must be available [-fpermissive]
+ string *stringArray = getItems();
+                                ^
+../src/History.cpp:108:32: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+../src/History.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: At global scope:
+../src/History.cpp:113:41: error: no ‘std::string* History<HistoryItem>::getItems()’ member function declared in class ‘History<HistoryItem>’
+ string * History<HistoryItem>::getItems()
+                                         ^
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+In file included from ../src/History.h:47:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘int History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:108:32: error: ‘getItems’ was not declared in this scope
+ string *stringArray = getItems();
+                                ^
+../src/History.cpp:109:7: warning: unused variable ‘m’ [-Wunused-variable]
+ Menu *m = new Menu(count, stringArray);
+       ^
+make: *** [src/CommandLine.o] Error 1
+13:45:17 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘int History<HistoryItem>::showHistory()’:
+../src/History.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems()’:
+../src/History.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/CommandLine.cpp: In member function ‘void CommandLine::showHistory(WINDOW*)’:
+../src/CommandLine.cpp:249:36: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+  string line = history.showHistory();
+                                    ^
+In file included from /usr/include/c++/4.8/string:52:0,
+                 from ../src/CommandLine.h:13,
+                 from ../src/CommandLine.cpp:13:
+/usr/include/c++/4.8/bits/basic_string.h:490:7: error:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’ [-fpermissive]
+       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc());
+       ^
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘int History<HistoryItem>::showHistory() [with HistoryItem = CommandLine]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:109:7: warning: unused variable ‘m’ [-Wunused-variable]
+ Menu *m = new Menu(count, stringArray);
+       ^
+make: *** [src/CommandLine.o] Error 1
+13:45:46 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp:106:5: error: prototype for ‘int History<HistoryItem>::showHistory()’ does not match any in class ‘History<HistoryItem>’
+ int History<HistoryItem>::showHistory()
+     ^
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:13:
+../src/History.h:24:14: error: candidate is: std::string History<HistoryItem>::showHistory()
+  std::string showHistory();
+              ^
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems()’:
+../src/History.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/CommandLine.o] Error 1
+13:46:02 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:110:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems()’:
+../src/History.cpp:116:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:109:7: warning: unused variable ‘m’ [-Wunused-variable]
+ Menu *m = new Menu(count, stringArray);
+       ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:46:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:111:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems()’:
+../src/History.cpp:117:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:47:30 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:111:1: error: ‘retrun’ was not declared in this scope
+ retrun "";
+ ^
+../src/History.cpp:111:8: error: expected ‘;’ before string constant
+ retrun "";
+        ^
+../src/History.cpp:112:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems()’:
+../src/History.cpp:118:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/CommandLine.o] Error 1
+13:47:44 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems()’:
+../src/History.cpp:118:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:51:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/CommandLine.h:16:0,
+                 from ../src/CommandLine.cpp:13:
+../src/History.h:34:16: error: expected ‘;’ at end of member declaration
+  std::string * getItems(string *stringItems);
+                ^
+../src/History.h:34:32: error: expected ‘)’ before ‘*’ token
+  std::string * getItems(string *stringItems);
+                                ^
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:108:39: error: expected primary-expression before ‘*’ token
+ string *stringItems = getItems(string *stringItems);
+                                       ^
+../src/History.cpp: At global scope:
+../src/History.cpp:116:60: error: no ‘std::string* History<HistoryItem>::getItems(std::string*)’ member function declared in class ‘History<HistoryItem>’
+ string * History<HistoryItem>::getItems(string *stringItems)
+                                                            ^
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:108:51: error: expression cannot be used as a function
+ string *stringItems = getItems(string *stringItems);
+                                                   ^
+make: *** [src/CommandLine.o] Error 1
+13:51:40 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:108:39: error: expected primary-expression before ‘*’ token
+ string *stringItems = getItems(string *stringItems);
+                                       ^
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems(std::string*)’:
+../src/History.cpp:122:4: error: ‘my_items’ was not declared in this scope
+    my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+    ^
+../src/History.cpp:125:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/CommandLine.o] Error 1
+13:51:46 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:108:39: error: expected primary-expression before ‘*’ token
+ string *stringItems = getItems(string *stringItems);
+                                       ^
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems(std::string*)’:
+../src/History.cpp:122:4: error: ‘my_items’ was not declared in this scope
+    my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+    ^
+../src/History.cpp:125:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/CommandLine.o] Error 1
+13:52:00 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems(std::string*)’:
+../src/History.cpp:122:4: error: ‘my_items’ was not declared in this scope
+    my_items[i++] = new_item(p->item->getTheString().c_str(),NULL);
+    ^
+../src/History.cpp:125:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/CommandLine.o] Error 1
+13:52:38 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems(std::string*)’:
+../src/History.cpp:125:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/History.cpp:108:43: warning: ‘stringItems’ is used uninitialized in this function [-Wuninitialized]
+ string *stringItems = getItems(stringItems);
+                                           ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:53:20 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems(std::string*)’:
+../src/History.cpp:126:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/History.cpp:109:1: warning: ‘stringItems’ is used uninitialized in this function [-Wuninitialized]
+ stringItems = getItems(stringItems);
+ ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:53:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string* History<HistoryItem>::getItems(std::string*)’:
+../src/History.cpp:125:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:54:06 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:54:47 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:111:28: error: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘int’ in initialization
+ int index = menu->showMenu();
+                            ^
+../src/History.cpp:111:5: warning: unused variable ‘index’ [-Wunused-variable]
+ int index = menu->showMenu();
+     ^
+make: *** [src/CommandLine.o] Error 1
+13:55:26 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:111:5: warning: unused variable ‘index’ [-Wunused-variable]
+ int index = menu->showMenu();
+     ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:55:46 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:56:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:111:28: error: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘int’ in initialization
+ int index = menu->showMenu();
+                            ^
+../src/History.cpp:111:5: warning: unused variable ‘index’ [-Wunused-variable]
+ int index = menu->showMenu();
+     ^
+make: *** [src/CommandLine.o] Error 1
+13:57:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:57:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:58:09 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+13:58:56 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+14:01:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:13:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/Menu.h:11:19: fatal error: String.h: No such file or directory
+ #include<String.h>
+                   ^
+compilation terminated.
+make: *** [src/CommandLine.o] Error 1
+14:01:45 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+In file included from ../src/Menu.cpp:1:0:
+../src/Menu.h:15:23: error: ‘std::string’ has not been declared
+  Menu(int count, std::string *stringArray);
+                       ^
+../src/Menu.h:16:2: error: ‘string’ in namespace ‘std’ does not name a type
+  std::string showMenu();
+  ^
+../src/Menu.h:27:22: error: ‘std::string’ has not been declared
+  void initItems(std::string *stringArray);
+                      ^
+../src/Menu.cpp:11:23: error: ‘string’ has not been declared
+ Menu::Menu(int count, string *stringArray) {
+                       ^
+../src/Menu.cpp:18:22: error: variable or field ‘initItems’ declared void
+ void Menu::initItems(string *stringArray)
+                      ^
+../src/Menu.cpp:18:22: error: ‘string’ was not declared in this scope
+../src/Menu.cpp:18:30: error: ‘stringArray’ was not declared in this scope
+ void Menu::initItems(string *stringArray)
+                              ^
+make: *** [src/Menu.o] Error 1
+14:01:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:13:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/Menu.h:11:19: fatal error: String.h: No such file or directory
+ #include<String.h>
+                   ^
+compilation terminated.
+make: *** [src/CommandLine.o] Error 1
+14:01:57 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:13:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/Menu.h:11:17: fatal error: String: No such file or directory
+ #include<String>
+                 ^
+compilation terminated.
+make: *** [src/CommandLine.o] Error 1
+14:02:03 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp: In member function ‘void Menu::initItems(std::string*)’:
+../src/Menu.cpp:22:57: warning: operation on ‘i’ may be undefined [-Wsequence-point]
+    my_items[i++] = new_item(stringArray[i].c_str(),NULL);
+                                                         ^
+Finished building: ../src/Menu.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:02:41 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp: In member function ‘void Menu::initItems(std::string*)’:
+../src/Menu.cpp:22:57: warning: operation on ‘i’ may be undefined [-Wsequence-point]
+    my_items[i++] = new_item(stringArray[i].c_str(),NULL);
+                                                         ^
+Finished building: ../src/Menu.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+14:03:40 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:00:09 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp: In member function ‘void Menu::initItems(std::string*)’:
+../src/Menu.cpp:22:57: warning: operation on ‘i’ may be undefined [-Wsequence-point]
+    my_items[i++] = new_item(stringArray[i].c_str(),NULL);
+                                                         ^
+Finished building: ../src/Menu.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:00:39 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+../src/Menu.cpp: In member function ‘void Menu::initItems(std::string*)’:
+../src/Menu.cpp:21:57: warning: operation on ‘i’ may be undefined [-Wsequence-point]
+    my_items[i++] = new_item(stringArray[i].c_str(),NULL);
+                                                         ^
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:00:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:01:07 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+13:03:16 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:77:7: warning: unused variable ‘menu’ [-Wunused-variable]
+ Menu *menu = new Menu(count, stringItems);
+       ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:05:23 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:06:17 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:08:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:11:45 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:12:43 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:12:50 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+13:16:17 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:16:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:17:41 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:18:25 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:19:18 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:77:7: warning: unused variable ‘menu’ [-Wunused-variable]
+ Menu *menu = new Menu(count, stringItems);
+       ^
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:20:04 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:20:36 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:22:37 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:79:14: error: expected initializer before ‘<’ token
+ for(int i=0,i<count;i++)
+              ^
+../src/History.cpp:79:14: error: expected ‘;’ before ‘<’ token
+../src/History.cpp:79:14: error: expected primary-expression before ‘<’ token
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:80:2: error: type ‘std::string {aka class std::basic_string<char>}’ argument given to ‘delete’, expected pointer
+  delete stringItems[i];
+  ^
+make: *** [src/CommandLine.o] Error 1
+13:22:49 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:80:2: error: type ‘std::string {aka class std::basic_string<char>}’ argument given to ‘delete’, expected pointer
+  delete stringItems[i];
+  ^
+make: *** [src/CommandLine.o] Error 1
+13:23:17 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In member function ‘std::string History<HistoryItem>::showHistory()’:
+../src/History.cpp:80:7: error: expected ‘;’ before ‘stringItems’
+  free stringItems[i];
+       ^
+../src/History.cpp:80:21: warning: statement is a reference, not call, to function ‘free’ [-Waddress]
+  free stringItems[i];
+                     ^
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:80:2: warning: statement is a reference, not call, to function ‘free’ [-Waddress]
+  free stringItems[i];
+  ^
+../src/History.cpp:80:2: warning: statement has no effect [-Wunused-value]
+make: *** [src/CommandLine.o] Error 1
+13:24:21 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+In file included from ../src/History.h:38:0,
+                 from ../src/CommandLine.h:16,
+                 from ../src/CommandLine.cpp:13:
+../src/History.cpp: In instantiation of ‘std::string History<HistoryItem>::showHistory() [with HistoryItem = CommandLine; std::string = std::basic_string<char>]’:
+../src/CommandLine.cpp:249:36:   required from here
+../src/History.cpp:80:2: error: type ‘std::string {aka class std::basic_string<char>}’ argument given to ‘delete’, expected pointer
+  delete stringItems[i];
+  ^
+make: *** [src/CommandLine.o] Error 1
+13:25:43 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+Building file: ../src/CommandLine.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CommandLine.d" -MT"src/CommandLine.d" -o "src/CommandLine.o" "../src/CommandLine.cpp"
+Finished building: ../src/CommandLine.cpp
+ 
+Building file: ../src/Menu.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Menu.d" -MT"src/Menu.d" -o "src/Menu.o" "../src/Menu.cpp"
+Finished building: ../src/Menu.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: GShell
+Invoking: GCC C++ Linker
+g++  -o "GShell"  ./src/CommandLine.o ./src/Menu.o ./src/main.o   -lncurses -lmenu
+Finished building target: GShell
+ 
+13:25:51 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.
+13:25:55 **** Incremental Build of configuration Debug for project GShell ****
+make all 
+make: Nothing to be done for `all'.

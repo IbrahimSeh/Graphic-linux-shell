@@ -10,7 +10,7 @@
 #define HISTORY_DEFAULT_SIZE 100
 
 #include <menu.h>
-
+#include "Menu.h"
 template <class HistoryItem>
 class History {
 public:
@@ -31,16 +31,7 @@ private:
 	struct element *first, *last, *current;
 	int size;
 	int count;
-
-	// TODO: Make them a separate object
-	ITEM **my_items;
-	MENU *my_menu;
-	WINDOW *my_menu_win;
-
-	void unpostAndFree(MENU *my_menu, ITEM **my_items);
-	void initMenu();
-	void endMenu();
-	int mouseClick(WINDOW *win, MEVENT *mouseEvent);
+	std::string * getItems(std::string *stringItems);
 
 };
 

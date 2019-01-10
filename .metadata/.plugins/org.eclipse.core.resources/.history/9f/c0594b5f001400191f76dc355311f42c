@@ -1,0 +1,31 @@
+/*
+ * History.h
+ *
+ *  Created on: Jan 9, 2019
+ *      Author: root
+ */
+
+#ifndef MENU_H_
+#define MENU_H_
+#define HISTORY_DEFAULT_SIZE 100
+
+#include <menu.h>
+
+class Menu {
+public:
+	Menu(int size=HISTORY_DEFAULT_SIZE);
+	string showMenu(int count);
+
+	// TODO: Make them a separate object
+	ITEM **my_items;
+	MENU *my_menu;
+	WINDOW *my_menu_win;
+private:
+	void unpostAndFree(MENU *my_menu, ITEM **my_items);
+	void initMenu(int count);
+	void endMenu();
+	int mouseClick(WINDOW *win, MEVENT *mouseEvent);
+
+};
+
+#endif /* MENU_H_ */
