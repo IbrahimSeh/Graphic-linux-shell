@@ -270,7 +270,7 @@ void  CommandLine::tabCompletion(WINDOW *win)
 	fd_set fds;
 
 	struct timeval tv;
-	tv.tv_sec = 1;
+	tv.tv_sec = 0.5;
 	tv.tv_usec = 0;
 
 	write(fd, line.c_str() , line.length());
