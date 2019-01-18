@@ -10,6 +10,9 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <algorithm>
+#include <sstream>
+using namespace std;
 #include "CommandLine.h"
 
 #define WIN_LEFT 0
@@ -20,7 +23,10 @@
 #define EDIT_END_POSITION WIN_WIDTH - 2
 #define MAX_COMMAND_LENGTH EDIT_END_POSITION - EDIT_START_POSITION + 1
 #define HISTORY_DEFAULT_SIZE 100
+#define TABLINE_DEFAULT_SIZE 3000
 #define CTRL_A 1
+#define CTRL_W 23
+#define BACKSPACE 8
 #define TAB 9
 using namespace std;
 
@@ -28,25 +34,29 @@ bool CommandLine::insertMode;
 int CommandLine::eraseCharacter;
 History<CommandLine> CommandLine::history = History<CommandLine>(HISTORY_DEFAULT_SIZE);
 
-CommandLine::CommandLine() {
+CommandLine::CommandLine(int fd) {
 	this->line = line;
 	commandLength = 0;
+	this->fd = fd;
 }
 
-CommandLine::CommandLine(string line) {
+CommandLine::CommandLine(string line, int fd) {
 	this->line = line;
 	commandLength = line.length();
+	this->fd = fd;
 }
 
 CommandLine::CommandLine(CommandLine &other) {
 	this->line = other.line;
+	this->fd = other.fd;
 	commandLength = line.length();
 }
 
-CommandLine::CommandLine(char c) {
+CommandLine::CommandLine(char c, int fd) {
 	line = "";
 	line += c;
 	commandLength = 1;
+	this->fd = fd;
 }
 
 const CommandLine & CommandLine::operator= (const CommandLine &rhs) {
@@ -62,9 +72,6 @@ string CommandLine::getTheString(){
 	return line;
 }
 
-void CommandLine::setTheString(std::string str){
-	line = str;
-}
 int CommandLine::edit() {
 	int c;
 
@@ -77,10 +84,7 @@ int CommandLine::edit() {
 	while (true) {
 		getyx(win,currY, currX);
 		c=wgetch(win);
-		if (c == eraseCharacter || c == KEY_BACKSPACE) {
-			leftArrow(win);
-			deleteCharacter(win);
-		} else if (c < KEY_MIN && isprint(c)) {
+		 if (c < KEY_MIN && isprint(c)) {
 			winAddChar(win,c);
 		} else {
 			switch(c){
@@ -98,6 +102,10 @@ int CommandLine::edit() {
 			case KEY_DC:
 				deleteCharacter(win);
 				refresh();
+				break;
+			case BACKSPACE:
+				leftArrow(win);
+				deleteCharacter(win);
 				break;
 			case KEY_MOUSE:
 				mouseClick(win);
@@ -118,10 +126,9 @@ int CommandLine::edit() {
 				showHistory(win);
 				break;
 			case TAB:
-				printf("this is tab\n");
 				updateLineFromWindow(win);
-				endwin();
-				return -1;
+				tabCompletion(win);
+				break;
 			default:
 				updateLineFromWindow(win);
 				endwin();
@@ -134,7 +141,7 @@ int CommandLine::edit() {
 	}
 }
 
-void CommandLine::send(int fd) {
+void CommandLine::send() {
 	const char LF = '\n';
 	write(fd, line.c_str() , line.length());
 	write(fd, &LF, 1);
@@ -250,10 +257,60 @@ void  CommandLine::showHistory(WINDOW *win)
 	if (!line.empty()) {
 		this->line = line;
 		this->commandLength = line.length();
-		restartEdit(win);
-	}else restartEdit(win);
+	}restartEdit(win);
 }
 
+void  CommandLine::tabCompletion(WINDOW *win)
+{
+	char c;
+	const char tab = TAB;
+	const char werase = CTRL_W;
+	string tabLine;
+
+	fd_set fds;
+
+	struct timeval tv;
+	tv.tv_sec = 1;
+	tv.tv_usec = 0;
+
+	write(fd, line.c_str() , line.length());
+	write(fd, &tab, 1);
+	write(fd, &tab, 1);
+
+	FD_ZERO(&fds);
+	FD_SET(fd,&fds);
+	while ((select(fd+1,&fds,NULL,NULL,&tv)) > 0) {
+		if (FD_ISSET(fd,&fds)){
+			read(fd, &c,1);
+			tabLine += c;
+			fflush (stdout);
+		}
+	}
+
+	string *stringItems  = new string[TABLINE_DEFAULT_SIZE ];
+	replaceSpacesToSpace(tabLine, stringItems);
+	Menu *menu = new Menu(TABLINE_DEFAULT_SIZE , stringItems);
+	string chosen = menu->showMenu();
+	delete []stringItems;
+	line = line.substr(0, line.find(' ')+1);
+	if (!chosen.empty()) {
+	this->line +=chosen;
+	this->commandLength += chosen.length();
+	}
+	write(fd, &werase, 1);
+	write(fd, &werase, 1);
+	restartEdit(win);
+}
+
+void CommandLine::replaceSpacesToSpace(string line, string *stringItems)
+{
+	int i = 0;
+	stringstream ssin(line);
+	while (ssin.good() && i < 1000){
+		ssin >> stringItems[i];
+		++i;
+	}
+}
 
 WINDOW *CommandLine::initWindow() {
 	WINDOW *ret;
@@ -272,16 +329,3 @@ WINDOW *CommandLine::initWindow() {
 	refresh();
 	return ret;
 }
-
-// #define RED_BLUE 1
-
-/*  Remnants of a trial program written at the beginning of the semester
-    wattron(inputWindow, A_STANDOUT);
-    mvwprintw(inputWindow, 5, 15, "Hello %s", "World");
-    mvwaddch(inputWindow, 6, 15, 'X');
-    wattron(inputWindow, COLOR_PAIR(RED_BLUE));
-    mvwprintw(inputWindow, 7, 15, "Red / Blue");
-    wattroff(inputWindow, COLOR_PAIR(RED_BLUE));
-    wattroff(inputWindow, A_STANDOUT);
-    wrefresh(inputWindow);
- */

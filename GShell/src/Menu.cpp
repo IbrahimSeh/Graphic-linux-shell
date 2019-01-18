@@ -10,7 +10,7 @@ using namespace std;
 
 Menu::Menu(int count, string *stringArray) {
 	this->count = count;
-	my_items = new ITEM * [count+1];
+    my_items = new ITEM * [count+1];
 	initItems(stringArray);
 	my_menu = new_menu(my_items);
 }
@@ -18,9 +18,9 @@ Menu::Menu(int count, string *stringArray) {
 void Menu::initItems(string *stringArray)
 {
 	for(int i=0;i<count;i++){
-		//printf("str %d = %s\n",i,stringArray[i].c_str());
-			my_items[i] = new_item(stringArray[i].c_str(),NULL);
-		}
+		my_items[i] = new_item(stringArray[i].c_str(),NULL);
+	}
+	my_items [count] = NULL;
 }
 
 void Menu::initMenu() {

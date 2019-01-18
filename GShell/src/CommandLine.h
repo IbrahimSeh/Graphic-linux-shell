@@ -15,20 +15,17 @@
 #include <unistd.h>
 #include "History.h"
 
-
 class CommandLine {
 public:
-	CommandLine();
-	CommandLine(std::string);
-	CommandLine(char);
+	CommandLine(int fd);
+	CommandLine(std::string, int fd);
+	CommandLine(char, int fd);
 	CommandLine(CommandLine &);
 	const CommandLine & operator= (const CommandLine &);
 	virtual ~CommandLine();
 	std::string getTheString();
-	void setTheString(std::string str);
 	int edit();
-	void send(int fd);
-	void tabsend(int fd);
+	void send();
 	void do_backspace(WINDOW* win);
 
 	static void init();
@@ -37,6 +34,7 @@ private:
 	std::string line;
 	int currX=0, currY=0;
 	int commandLength;
+	int fd;
 	static bool insertMode;
 	static int eraseCharacter;
 	static History<CommandLine> history;
@@ -55,6 +53,8 @@ private:
 	void downArrow(WINDOW *win);
 	void restartEdit(WINDOW *win);
 	void showHistory(WINDOW *win);
+	void tabCompletion(WINDOW *win);
+	void replaceSpacesToSpace(string line, string *stringItems);
 };
 
 #endif /* COMMANDLINE_H_ */
