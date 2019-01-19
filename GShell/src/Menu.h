@@ -15,7 +15,6 @@ public:
 	Menu(int count, std::string *stringArray);
 	std::string showMenu();
 
-	// TODO: Make them a separate object
 	ITEM **my_items;
 	MENU *my_menu;
 	WINDOW *my_menu_win;

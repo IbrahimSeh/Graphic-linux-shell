@@ -84,7 +84,7 @@ int CommandLine::edit() {
 	while (true) {
 		getyx(win,currY, currX);
 		c=wgetch(win);
-		 if (c < KEY_MIN && isprint(c)) {
+		if (c < KEY_MIN && isprint(c)) {
 			winAddChar(win,c);
 		} else {
 			switch(c){
@@ -270,8 +270,8 @@ void  CommandLine::tabCompletion(WINDOW *win)
 	fd_set fds;
 
 	struct timeval tv;
-	tv.tv_sec = 0.5;
-	tv.tv_usec = 0;
+	tv.tv_sec = 0;
+	tv.tv_usec = 50000;//half second
 
 	write(fd, line.c_str() , line.length());
 	write(fd, &tab, 1);
@@ -282,11 +282,11 @@ void  CommandLine::tabCompletion(WINDOW *win)
 	while ((select(fd+1,&fds,NULL,NULL,&tv)) > 0) {
 		if (FD_ISSET(fd,&fds)){
 			read(fd, &c,1);
-			tabLine += c;
+			tabLine += c;printf("c = %d\n",c);
 			fflush (stdout);
 		}
 	}
-
+	//printf("tabLine = %s\n",tabLine.c_str());
 	string *stringItems  = new string[TABLINE_DEFAULT_SIZE ];
 	replaceSpacesToSpace(tabLine, stringItems);
 	Menu *menu = new Menu(TABLINE_DEFAULT_SIZE , stringItems);
@@ -294,8 +294,8 @@ void  CommandLine::tabCompletion(WINDOW *win)
 	delete []stringItems;
 	line = line.substr(0, line.find(' ')+1);
 	if (!chosen.empty()) {
-	this->line +=chosen;
-	this->commandLength += chosen.length();
+		this->line +=chosen;
+		this->commandLength += chosen.length();
 	}
 	write(fd, &werase, 1);
 	write(fd, &werase, 1);
