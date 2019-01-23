@@ -12,6 +12,7 @@
 #include <fcntl.h>
 #include <algorithm>
 #include <sstream>
+#include<signal.h>
 using namespace std;
 #include "CommandLine.h"
 
@@ -142,9 +143,12 @@ int CommandLine::edit() {
 }
 
 void CommandLine::send() {
+	signal(SIGINT,SIG_IGN);
+	//signal(SIGTSTP,SIG_IGN);
 	const char LF = '\n';
 	write(fd, line.c_str() , line.length());
 	write(fd, &LF, 1);
+
 }
 
 void CommandLine::init(){
@@ -282,7 +286,7 @@ void  CommandLine::tabCompletion(WINDOW *win)
 	while ((select(fd+1,&fds,NULL,NULL,&tv)) > 0) {
 		if (FD_ISSET(fd,&fds)){
 			read(fd, &c,1);
-			tabLine += c;printf("c = %d\n",c);
+			tabLine += c;//printf("c = %d\n",c);
 			fflush (stdout);
 		}
 	}
