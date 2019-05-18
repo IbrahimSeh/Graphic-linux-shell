@@ -138,6 +138,7 @@ int main () {
 	int terminator=0;
 	do {
 		CommandLine *command;
+		printf("\n");
 		char c = fdToStdout(mfd);
 		if (isprint(c)) {
 		    command = new CommandLine(c, mfd);

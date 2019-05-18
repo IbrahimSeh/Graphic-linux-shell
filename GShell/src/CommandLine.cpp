@@ -13,6 +13,9 @@
 #include <algorithm>
 #include <sstream>
 #include<signal.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 using namespace std;
 #include "CommandLine.h"
 
@@ -280,17 +283,25 @@ void  CommandLine::tabCompletion(WINDOW *win)
 	write(fd, line.c_str() , line.length());
 	write(fd, &tab, 1);
 	write(fd, &tab, 1);
-
+printf("a1");
 	FD_ZERO(&fds);
 	FD_SET(fd,&fds);
 	while ((select(fd+1,&fds,NULL,NULL,&tv)) > 0) {
 		if (FD_ISSET(fd,&fds)){
 			read(fd, &c,1);
-			tabLine += c;//printf("c = %d\n",c);
+			tabLine += c;
+			printf("c = %c\n",c);
 			fflush (stdout);
 		}
 	}
-	//printf("tabLine = %s\n",tabLine.c_str());
+	printf("a2");
+	printf("tabLine = %s\n",tabLine.c_str());
+
+//	    struct stat path_stat;
+//	    stat(tabLine.c_str(), &path_stat);
+//	     S_ISREG(path_stat.st_mode);
+
+
 	string *stringItems  = new string[TABLINE_DEFAULT_SIZE ];
 	replaceSpacesToSpace(tabLine, stringItems);
 	Menu *menu = new Menu(TABLINE_DEFAULT_SIZE , stringItems);
@@ -301,6 +312,8 @@ void  CommandLine::tabCompletion(WINDOW *win)
 		this->line +=chosen;
 		this->commandLength += chosen.length();
 	}
+	write(fd, &werase, 1);
+	write(fd, &werase, 1);
 	write(fd, &werase, 1);
 	write(fd, &werase, 1);
 	restartEdit(win);
